@@ -26,5 +26,8 @@ public class MainActivity extends AppCompatActivity {
         Act3 = findViewById(R.id.btnAct3);
         Act3.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), NumbersActivity.class)));
 
+        Act4 = findViewById(R.id.btnAct4);
+        Act4.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), SaludosActivity.class)));
+
     }
 }

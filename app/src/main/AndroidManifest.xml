@@ -9,6 +9,13 @@
         android:roundIcon="@mipmap/pdihhu_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light">
+        <activity android:name=".SaludosActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".NumbersActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
