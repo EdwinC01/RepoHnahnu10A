@@ -16,6 +16,7 @@
             android:layout_height="match_parent">
 
             <ImageButton
+                android:id="@+id/amarillo"
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_row="1"
@@ -33,6 +34,7 @@
                 android:textSize="20sp" />
 
             <ImageButton
+                android:id="@+id/naranja"
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_row="1"
@@ -50,6 +52,7 @@
                 android:textSize="20sp" />
 
             <ImageButton
+                android:id="@+id/azul"
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_row="4"
@@ -67,6 +70,7 @@
                 android:textSize="20sp" />
 
             <ImageButton
+                android:id="@+id/blanco"
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_row="4"
@@ -84,6 +88,7 @@
                 android:textSize="20sp" />
 
             <ImageButton
+                android:id="@+id/gris"
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_row="6"
@@ -101,6 +106,7 @@
                 android:textSize="20sp" />
 
             <ImageButton
+                android:id="@+id/negro"
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_row="6"
@@ -118,6 +124,7 @@
                 android:textSize="20sp" />
 
             <ImageButton
+                android:id="@+id/rojo"
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_row="8"
@@ -135,6 +142,7 @@
                 android:textSize="20sp" />
 
             <ImageButton
+                android:id="@+id/verde"
                 android:layout_width="175dp"
                 android:layout_height="175dp"
                 android:layout_row="8"
