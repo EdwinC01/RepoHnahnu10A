@@ -19,8 +19,35 @@ public class ColorsActivity extends AppCompatActivity {
         this.setTitle(Title);
 
         imgBtnYellow = findViewById(R.id.amarillo);
-        MediaPlayer mp = MediaPlayer.create(this, R.raw.ai_chan);
+        MediaPlayer mpYel = MediaPlayer.create(this, R.raw.frag_expl_water1);
+        imgBtnYellow.setOnClickListener(v -> mpYel.start());
 
-        imgBtnYellow.setOnClickListener(v -> mp.start());
+        imgBtnOrange = findViewById(R.id.naranja);
+        MediaPlayer mpOra = MediaPlayer.create(this, R.raw.frag_expl_water1);
+        imgBtnOrange.setOnClickListener(v -> mpOra.start());
+
+        imgBtnBlue = findViewById(R.id.azul);
+        MediaPlayer mpBlu = MediaPlayer.create(this, R.raw.frag_expl_water1);
+        imgBtnBlue.setOnClickListener(v -> mpBlu.start());
+
+        imgBtnWhite = findViewById(R.id.blanco);
+        MediaPlayer mpWhi = MediaPlayer.create(this, R.raw.frag_expl_water1);
+        imgBtnWhite.setOnClickListener(v -> mpWhi.start());
+
+        imgBtnGray = findViewById(R.id.gris);
+        MediaPlayer mpGra = MediaPlayer.create(this, R.raw.frag_expl_water1);
+        imgBtnGray.setOnClickListener(v -> mpGra.start());
+
+        imgBtnBlack = findViewById(R.id.negro);
+        MediaPlayer mpBla = MediaPlayer.create(this, R.raw.frag_expl_water1);
+        imgBtnBlack.setOnClickListener(v -> mpBla.start());
+
+        imgBtnRed = findViewById(R.id.rojo);
+        MediaPlayer mpRed = MediaPlayer.create(this, R.raw.frag_expl_water1);
+        imgBtnRed.setOnClickListener(v -> mpRed.start());
+
+        imgBtnGreen = findViewById(R.id.verde);
+        MediaPlayer mpGre = MediaPlayer.create(this, R.raw.frag_expl_water1);
+        imgBtnGreen.setOnClickListener(v -> mpGre.start());
     }
 }
