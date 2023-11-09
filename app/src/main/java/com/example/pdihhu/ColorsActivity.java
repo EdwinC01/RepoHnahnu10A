@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 
 public class ColorsActivity extends AppCompatActivity {
-    String Title = "COLORES | YA NJÄT'I";
+    String Title = "COLORES | Yä thuhu yä kuhu";
 
     ImageButton imgBtnYellow, imgBtnOrange, imgBtnBlue, imgBtnWhite, imgBtnGray, imgBtnBlack, imgBtnRed, imgBtnGreen;
 
@@ -19,15 +19,15 @@ public class ColorsActivity extends AppCompatActivity {
         this.setTitle(Title);
 
         imgBtnYellow = findViewById(R.id.amarillo);
-        MediaPlayer mpYel = MediaPlayer.create(this, R.raw.frag_expl_water1);
+        MediaPlayer mpYel = MediaPlayer.create(this, R.raw.amarillo);
         imgBtnYellow.setOnClickListener(v -> mpYel.start());
 
         imgBtnOrange = findViewById(R.id.naranja);
-        MediaPlayer mpOra = MediaPlayer.create(this, R.raw.frag_expl_water1);
+        MediaPlayer mpOra = MediaPlayer.create(this, R.raw.anaranjado);
         imgBtnOrange.setOnClickListener(v -> mpOra.start());
 
         imgBtnBlue = findViewById(R.id.azul);
-        MediaPlayer mpBlu = MediaPlayer.create(this, R.raw.frag_expl_water1);
+        MediaPlayer mpBlu = MediaPlayer.create(this, R.raw.azul);
         imgBtnBlue.setOnClickListener(v -> mpBlu.start());
 
         imgBtnWhite = findViewById(R.id.blanco);
@@ -35,19 +35,19 @@ public class ColorsActivity extends AppCompatActivity {
         imgBtnWhite.setOnClickListener(v -> mpWhi.start());
 
         imgBtnGray = findViewById(R.id.gris);
-        MediaPlayer mpGra = MediaPlayer.create(this, R.raw.frag_expl_water1);
+        MediaPlayer mpGra = MediaPlayer.create(this, R.raw.gris);
         imgBtnGray.setOnClickListener(v -> mpGra.start());
 
         imgBtnBlack = findViewById(R.id.negro);
-        MediaPlayer mpBla = MediaPlayer.create(this, R.raw.frag_expl_water1);
+        MediaPlayer mpBla = MediaPlayer.create(this, R.raw.negro);
         imgBtnBlack.setOnClickListener(v -> mpBla.start());
 
         imgBtnRed = findViewById(R.id.rojo);
-        MediaPlayer mpRed = MediaPlayer.create(this, R.raw.frag_expl_water1);
+        MediaPlayer mpRed = MediaPlayer.create(this, R.raw.rojo);
         imgBtnRed.setOnClickListener(v -> mpRed.start());
 
         imgBtnGreen = findViewById(R.id.verde);
-        MediaPlayer mpGre = MediaPlayer.create(this, R.raw.frag_expl_water1);
+        MediaPlayer mpGre = MediaPlayer.create(this, R.raw.verde);
         imgBtnGreen.setOnClickListener(v -> mpGre.start());
     }
 }
