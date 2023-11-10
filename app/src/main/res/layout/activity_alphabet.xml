@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     android:orientation="vertical"
     android:padding="15dp"
     tools:context=".AlphabetActivity">
@@ -16,7 +17,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
@@ -30,331 +31,343 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="Presiona los botones para escuchar la pronunciación\n"
+                android:text="Presiona los botones para escuchar la pronunciación"
                 android:textColor="#000"
-                android:textSize="20sp"
+                android:textSize="28sp"
                 android:layout_gravity="center"
                 android:gravity="center"/>
 
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
             <Button
                 android:id="@+id/Aa"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:text="Aa" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
+                android:backgroundTint="#80ff5d56"
                 android:layout_margin="16dp"
-                app:cornerRadius="4dp"
-                app:strokeWidth="2dp"
+                android:layout_row="0"
+                android:layout_column="0"
                 android:layout_gravity="top | center" />
 
             <Button
                 android:id="@+id/Aa_"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="Ää" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
+                android:backgroundTint="#80ff5d56"
                 app:cornerRadius="4dp"
+                android:layout_row="0"
+                android:layout_column="1"
                 android:layout_gravity="top | center" />
 
             <Button
                 android:id="@+id/Bb"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="Bb" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
-                app:cornerRadius="4dp"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="0"
+                android:layout_column="2"
                 android:layout_gravity="top | center" />
 
             <Button
                 android:id="@+id/Dd"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="Dd" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="0"
-                android:layout_column="3"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="1"
+                android:layout_column="0"
                 android:layout_gravity="top | center" />
 
             <Button
                 android:id="@+id/Ee"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="Ee" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="0"
-                android:layout_column="4"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="1"
+                android:layout_column="1"
                 android:layout_gravity="top | center" />
 
             <Button
                 android:id="@+id/Ee_"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="E̲e̲" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
+                android:backgroundTint="#80ff5d56"
                 android:layout_row="1"
-                android:layout_column="0"
+                android:layout_column="2"
                 android:layout_gravity="top | center" />
 
             <Button
                 android:id="@+id/Ff"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="Ff" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="1"
-                android:layout_column="1"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="2"
+                android:layout_column="0"
                 android:layout_gravity="top | center" />
 
             <Button
                 android:id="@+id/Gg"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="Gg" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="1"
-                android:layout_column="2"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="2"
+                android:layout_column="1"
                 android:layout_gravity="top | center" />
 
             <Button
                 android:id="@+id/Hh"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="Hh" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="1"
-                android:layout_column="3"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="2"
+                android:layout_column="2"
                 android:layout_gravity="top | center" />
 
             <Button
                 android:id="@+id/Ii"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="Ii" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="1"
-                android:layout_column="4"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="3"
+                android:layout_column="0"
                 android:layout_gravity="top | center" />
 
             <Button
                 android:id="@+id/Jj"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="Jj" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="2"
-                android:layout_column="0"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="3"
+                android:layout_column="1"
                 android:layout_gravity="top | center" />
 
             <Button
                 android:id="@+id/Kk"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="Kk" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="2"
-                android:layout_column="1"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="3"
+                android:layout_column="2"
                 android:layout_gravity="top | center" />
 
             <Button
                 android:id="@+id/Ll"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="Ll" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="2"
-                android:layout_column="2"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="4"
+                android:layout_column="0"
                 android:layout_gravity="top | center" />
 
             <Button
                 android:id="@+id/Mm"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="Mm" style="@style/miBoton"
                 android:textSize="25sp"
-                android:textColor="#000"
-                android:layout_row="2"
-                android:layout_column="3"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="4"
+                android:layout_column="1"
                 android:layout_gravity="top | center" />
 
             <Button
                 android:id="@+id/Nn"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="Nn" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="2"
-                android:layout_column="4"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="4"
+                android:layout_column="2"
                 android:layout_gravity="top | center" />
 
             <Button
                 android:id="@+id/Nn_"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="Ññ" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="3"
-                android:layout_column="0"
-                android:layout_gravity="top | center" />
-
-            <Button
-                android:id="@+id/Oo"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_margin="16dp"
-                android:text="Oo" style="@style/miBoton"
-                android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="3"
-                android:layout_column="1"
-                android:layout_gravity="top | center" />
-
-            <Button
-                android:id="@+id/O̲o̲"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_margin="16dp"
-                android:text="O̲o̲" style="@style/miBoton"
-                android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="3"
-                android:layout_column="2"
-                android:layout_gravity="top | center" />
-
-            <Button
-                android:id="@+id/Pp"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_margin="16dp"
-                android:text="Pp" style="@style/miBoton"
-                android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="3"
-                android:layout_column="3"
-                android:layout_gravity="top | center" />
-
-            <Button
-                android:id="@+id/Rr"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_margin="16dp"
-                android:text="Rr" style="@style/miBoton"
-                android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="3"
-                android:layout_column="4"
-                android:layout_gravity="top | center" />
-
-            <Button
-                android:id="@+id/Ss"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_margin="16dp"
-                android:text="Ss" style="@style/miBoton"
-                android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="4"
-                android:layout_column="0"
-                android:layout_gravity="top | center" />
-
-            <Button
-                android:id="@+id/Tt"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_margin="16dp"
-                android:text="Tt" style="@style/miBoton"
-                android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="4"
-                android:layout_column="1"
-                android:layout_gravity="top | center" />
-
-            <Button
-                android:id="@+id/Uu"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_margin="16dp"
-                android:text="Uu" style="@style/miBoton"
-                android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="4"
-                android:layout_column="2"
-                android:layout_gravity="top | center" />
-
-            <Button
-                android:id="@+id/U̲u̲"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_margin="16dp"
-                android:text="U̲u̲" style="@style/miBoton"
-                android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="4"
-                android:layout_column="3"
-                android:layout_gravity="top | center" />
-
-            <Button
-                android:id="@+id/Xx"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_margin="16dp"
-                android:text="Xx" style="@style/miBoton"
-                android:textSize="35sp"
-                android:textColor="#000"
-                android:layout_row="4"
-                android:layout_column="4"
-                android:layout_gravity="top | center" />
-
-            <Button
-                android:id="@+id/Yy"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_margin="16dp"
-                android:text="Yy" style="@style/miBoton"
-                android:textSize="35sp"
-                android:textColor="#000"
+                android:backgroundTint="#80ff5d56"
                 android:layout_row="5"
                 android:layout_column="0"
                 android:layout_gravity="top | center" />
 
             <Button
+                android:id="@+id/Oo"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="16dp"
+                android:text="Oo" style="@style/miBoton"
+                android:textSize="35sp"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="5"
+                android:layout_column="1"
+                android:layout_gravity="top | center" />
+
+            <Button
+                android:id="@+id/O̲o̲"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="16dp"
+                android:text="O̲o̲" style="@style/miBoton"
+                android:textSize="35sp"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="5"
+                android:layout_column="2"
+                android:layout_gravity="top | center" />
+
+            <Button
+                android:id="@+id/Pp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="16dp"
+                android:text="Pp" style="@style/miBoton"
+                android:textSize="35sp"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="6"
+                android:layout_column="0"
+                android:layout_gravity="top | center" />
+
+            <Button
+                android:id="@+id/Rr"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="16dp"
+                android:text="Rr" style="@style/miBoton"
+                android:textSize="35sp"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="6"
+                android:layout_column="1"
+                android:layout_gravity="top | center" />
+
+            <Button
+                android:id="@+id/Ss"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="16dp"
+                android:text="Ss" style="@style/miBoton"
+                android:textSize="35sp"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="6"
+                android:layout_column="2"
+                android:layout_gravity="top | center" />
+
+            <Button
+                android:id="@+id/Tt"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="16dp"
+                android:text="Tt" style="@style/miBoton"
+                android:textSize="35sp"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="7"
+                android:layout_column="0"
+                android:layout_gravity="top | center" />
+
+            <Button
+                android:id="@+id/Uu"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="16dp"
+                android:text="Uu" style="@style/miBoton"
+                android:textSize="35sp"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="7"
+                android:layout_column="1"
+                android:layout_gravity="top | center" />
+
+            <Button
+                android:id="@+id/U̲u̲"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="16dp"
+                android:text="U̲u̲" style="@style/miBoton"
+                android:textSize="35sp"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="7"
+                android:layout_column="2"
+                android:layout_gravity="top | center" />
+
+            <Button
+                android:id="@+id/Xx"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="16dp"
+                android:text="Xx" style="@style/miBoton"
+                android:textSize="35sp"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="8"
+                android:layout_column="0"
+                android:layout_gravity="top | center" />
+
+            <Button
+                android:id="@+id/Yy"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_margin="16dp"
+                android:text="Yy" style="@style/miBoton"
+                android:textSize="35sp"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="8"
+                android:layout_column="1"
+                android:layout_gravity="top | center" />
+
+            <Button
                 android:id="@+id/Zz"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
                 android:layout_margin="16dp"
                 android:text="Zz" style="@style/miBoton"
                 android:textSize="35sp"
-                android:textColor="#000"
+                android:backgroundTint="#80ff5d56"
+                android:layout_row="8"
+                android:layout_column="2"
                 android:layout_gravity="top | center" />
+
+            </GridLayout>
 
             <TextView
                 android:layout_width="match_parent"
@@ -362,6 +375,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnJuego2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#80ff5d56"
+                android:text="Juego"/>
 
         </LinearLayout>
 

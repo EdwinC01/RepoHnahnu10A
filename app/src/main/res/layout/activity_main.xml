@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     android:padding="15dp"
     tools:context=".MainActivity">
 
@@ -36,26 +37,21 @@
 
             <Button
                 android:id="@+id/btnAct1"
-                style=""
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:layout_margin="16dp"
                 android:text="COLORES"
-                android:textColor="#000"
-                android:textSize="24sp"
-                app:cornerRadius="4dp"
-                app:strokeWidth="2dp" />
+                android:backgroundTint="#80ff5d56"
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/btnAct2"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:text="ALFABETO" style=""
-                android:textColor="#000"
+                android:text="ALFABETO"
+                android:backgroundTint="#80ff5d56"
                 android:textSize="24sp"
-                app:cornerRadius="4dp"
-                app:strokeWidth="2dp"
                 android:layout_margin="16dp"
                 android:layout_gravity="center" />
 
@@ -63,11 +59,9 @@
                 android:id="@+id/btnAct3"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:text="NÚMEROS" style=""
-                android:textColor="#000"
+                android:text="NÚMEROS"
+                android:backgroundTint="#80ff5d50"
                 android:textSize="24sp"
-                app:cornerRadius="4dp"
-                app:strokeWidth="2dp"
                 android:layout_margin="16dp"
                 android:layout_gravity="center" />
 
@@ -75,43 +69,16 @@
                 android:id="@+id/btnAct4"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:text="DÍAS DE LA SEMANA" style=""
-                android:textColor="#000"
-                android:textSize="24sp"
-                app:cornerRadius="4dp"
-                app:strokeWidth="2dp"
                 android:layout_margin="16dp"
-                android:layout_gravity="center" />
-
+                android:backgroundTint="#80ff5d50"
+                android:textSize="24sp"
+                android:text="DÍAS DE LA SEMANA" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/btnJuego1"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.102"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.809" />
-
-
-            <Button
-                android:id="@+id/btnJuego2"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.897"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.814" />
 
         </LinearLayout>
 

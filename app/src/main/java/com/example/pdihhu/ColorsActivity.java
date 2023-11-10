@@ -2,14 +2,17 @@ package com.example.pdihhu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class ColorsActivity extends AppCompatActivity {
     String Title = "COLORES | Yä thuhu yä kuhu";
 
     ImageButton imgBtnYellow, imgBtnOrange, imgBtnBlue, imgBtnWhite, imgBtnGray, imgBtnBlack, imgBtnRed, imgBtnGreen;
+    private Button Juego1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,5 +52,8 @@ public class ColorsActivity extends AppCompatActivity {
         imgBtnGreen = findViewById(R.id.verde);
         MediaPlayer mpGre = MediaPlayer.create(this, R.raw.verde);
         imgBtnGreen.setOnClickListener(v -> mpGre.start());
+
+        Juego1 = findViewById(R.id.btnJuego1);
+        Juego1.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), RelationWordsActivity.class)));
     }
 }

@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button Act1, Act2, Act3, Act4, Juego1;
-    String Title = "Bienvenido";
+    Button Act1, Act2, Act3, Act4;
+    String Title = "Pädi Hñähñu";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         Act4 = findViewById(R.id.btnAct4);
         Act4.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), SaludosActivity.class)));
-
-        Juego1 = findViewById(R.id.btnJuego1);
-        Juego1.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), RelationWordsActivity.class)));
-
 
 
     }

@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo"
+    android:padding="15dp"
     tools:context=".ColorsActivity">
 
     <ScrollView
@@ -11,154 +14,167 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <GridLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Presiona los botones para escuchar la pronunciación"
+                android:textColor="#000"
+                android:textSize="28sp"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_gravity="top | center"
+                android:text="amarillo | k'ast'i"
+                android:textSize="28sp" />
 
             <ImageButton
                 android:id="@+id/amarillo"
-                android:layout_width="175dp"
+                android:layout_width="match_parent"
                 android:layout_height="175dp"
-                android:layout_row="1"
-                android:layout_column="0"
+                android:layout_margin="16dp"
+                android:background="#fff"
                 android:layout_gravity="center"
                 android:src="@drawable/amarillo" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="0"
+                android:layout_margin="16dp"
                 android:layout_gravity="top | center"
-                android:text="amarillo | k'ast'i"
-                android:textSize="20sp" />
+                android:text="anaranjado | nanxa"
+                android:textSize="28sp" />
 
             <ImageButton
                 android:id="@+id/naranja"
-                android:layout_width="175dp"
+                android:layout_width="match_parent"
                 android:layout_height="175dp"
-                android:layout_row="1"
-                android:layout_column="1"
+                android:layout_margin="16dp"
                 android:layout_gravity="center"
+                android:background="#fff"
                 android:src="@drawable/anaranjado" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="1"
                 android:layout_gravity="top | center"
-                android:text="anaranjado | nanxa"
-                android:textSize="20sp" />
+                android:text="azul | ìxki"
+                android:textSize="28sp" />
 
             <ImageButton
                 android:id="@+id/azul"
-                android:layout_width="175dp"
+                android:layout_width="match_parent"
                 android:layout_height="175dp"
-                android:layout_row="4"
-                android:layout_column="0"
+                android:layout_margin="16dp"
+                android:background="#fff"
                 android:layout_gravity="center"
                 android:src="@drawable/azul" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="3"
-                android:layout_column="0"
                 android:layout_gravity="top | center"
-                android:text="azul | ìxki"
-                android:textSize="20sp" />
+                android:text="blanco | t'axi"
+                android:textSize="28sp" />
 
             <ImageButton
                 android:id="@+id/blanco"
-                android:layout_width="175dp"
+                android:layout_width="match_parent"
                 android:layout_height="175dp"
-                android:layout_row="4"
-                android:layout_column="1"
+                android:layout_margin="16dp"
                 android:layout_gravity="center"
+                android:background="#fff"
                 android:src="@drawable/blanco" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="3"
-                android:layout_column="1"
                 android:layout_gravity="top | center"
-                android:text="blanco | t'axi"
-                android:textSize="20sp" />
+                android:text="gris | b'ospi"
+                android:textSize="28sp" />
 
             <ImageButton
                 android:id="@+id/gris"
-                android:layout_width="175dp"
+                android:layout_width="match_parent"
                 android:layout_height="175dp"
-                android:layout_row="6"
-                android:layout_column="0"
+                android:layout_margin="16dp"
                 android:layout_gravity="center"
+                android:background="#fff"
                 android:src="@drawable/gris" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="5"
-                android:layout_column="0"
                 android:layout_gravity="top | center"
-                android:text="gris | b'ospi"
-                android:textSize="20sp" />
+                android:text="negro | mbo'i - mbot'i"
+                android:textSize="28sp" />
 
             <ImageButton
                 android:id="@+id/negro"
-                android:layout_width="175dp"
+                android:layout_width="match_parent"
                 android:layout_height="175dp"
-                android:layout_row="6"
-                android:layout_column="1"
+                android:layout_margin="16dp"
                 android:layout_gravity="center"
+                android:background="#fff"
                 android:src="@drawable/negro" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="5"
-                android:layout_column="1"
-                android:layout_gravity="top | center"
-                android:text="negro | mbo'i - mbot'i"
-                android:textSize="20sp" />
+                android:layout_gravity="center"
+                android:text="rojo | the̲ni"
+                android:textSize="28sp" />
 
             <ImageButton
                 android:id="@+id/rojo"
-                android:layout_width="175dp"
+                android:layout_width="match_parent"
                 android:layout_height="175dp"
-                android:layout_row="8"
-                android:layout_column="0"
+                android:layout_margin="16dp"
                 android:layout_gravity="center"
+                android:background="#fff"
                 android:src="@drawable/rojo" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="7"
-                android:layout_column="0"
                 android:layout_gravity="center"
-                android:text="rojo | the̲ni"
-                android:textSize="20sp" />
+                android:text="verde | k'angi"
+                android:textSize="28sp" />
 
             <ImageButton
                 android:id="@+id/verde"
-                android:layout_width="175dp"
+                android:layout_width="match_parent"
                 android:layout_height="175dp"
-                android:layout_row="8"
-                android:layout_column="1"
+                android:layout_margin="16dp"
                 android:layout_gravity="center"
+                android:background="#fff"
                 android:src="@drawable/verde" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_row="7"
-                android:layout_column="1"
+            <Button
+                android:id="@+id/btnJuego1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:text="verde | k'angi"
-                android:textSize="20sp" />
-        </GridLayout>
+                android:text="Juego"
+                android:backgroundTint="#80ff5d56"/>
+
+        </LinearLayout>
 
     </ScrollView>
 

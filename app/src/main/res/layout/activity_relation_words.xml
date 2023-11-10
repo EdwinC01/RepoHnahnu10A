@@ -4,35 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/fondo"
     tools:context=".RelationWordsActivity">
 
     <ScrollView
-        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"></ScrollView>
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/attemptsTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Intentos restantes: 3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textSize="16sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        <TextView
+            android:id="@+id/attemptsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intentos restantes: 3"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
     <Button
         android:id="@+id/Amarillo"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="Amarillo"
+        android:layout_row="0"
+        android:layout_column="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.178"
@@ -44,7 +65,10 @@
         android:id="@+id/Azul"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="Azul"
+        android:layout_row="1"
+        android:layout_column="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.178"
@@ -56,7 +80,10 @@
         android:id="@+id/Blanco"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="Blanco"
+        android:layout_row="7"
+        android:layout_column="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.178"
@@ -69,7 +96,10 @@
         android:id="@+id/Gris"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="Gris"
+        android:layout_row="3"
+        android:layout_column="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.178"
@@ -82,7 +112,10 @@
         android:id="@+id/Negro"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="Negro"
+        android:layout_row="4"
+        android:layout_column="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.178"
@@ -95,7 +128,10 @@
         android:id="@+id/gri"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="B'ospi"
+        android:layout_row="4"
+        android:layout_column="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.825"
@@ -108,7 +144,10 @@
         android:id="@+id/ver"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="K'angi"
+        android:layout_row="3"
+        android:layout_column="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.825"
@@ -121,7 +160,10 @@
         android:id="@+id/roj"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="Theni"
+        android:layout_row="0"
+        android:layout_column="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.825"
@@ -133,7 +175,10 @@
         android:id="@+id/ama"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="K'ast'i"
+        android:layout_row="5"
+        android:layout_column="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.825"
@@ -145,7 +190,10 @@
         android:id="@+id/neg"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="Mbo'i"
+        android:layout_row="6"
+        android:layout_column="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.825"
@@ -157,7 +205,10 @@
         android:id="@+id/nar"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="Nanxa"
+        android:layout_row="7"
+        android:layout_column="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.825"
@@ -169,7 +220,10 @@
         android:id="@+id/Naranja"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="Naranja"
+        android:layout_row="5"
+        android:layout_column="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.178"
@@ -181,7 +235,10 @@
         android:id="@+id/azu"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="ixki"
+        android:layout_row="1"
+        android:layout_column="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.825"
@@ -193,7 +250,10 @@
         android:id="@+id/bla"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="t´axi"
+        android:layout_row="2"
+        android:layout_column="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.825"
@@ -206,7 +266,10 @@
         android:id="@+id/Rojo"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="Rojo"
+        android:layout_row="2"
+        android:layout_column="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.175"
@@ -219,13 +282,22 @@
         android:id="@+id/Verde"
         android:layout_width="125dp"
         android:layout_height="50dp"
+        android:layout_margin="30dp"
         android:text="Verde"
+        android:layout_row="6"
+        android:layout_column="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.850" />
+
+        </GridLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,128 +2,242 @@ package com.example.pdihhu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
-public class AlphabetActivity extends AppCompatActivity {
+public class AlphabetActivity extends AppCompatActivity implements View.OnClickListener {
     String Title = "EL ALFABETO HÑÄHÑU | RA HMUNTS'A NSIHNI HÑÄHÑU";
 
-    Button Aa, Aa_, Bb, Dd, Ee, Ee_, Ff, Gg, Hh, Ii, Jj, Kk, Ll, Mm, Nn, Nn_, Oo, Oo_, Pp, Rr, Ss, Tt, Uu, Uu_, Xx, Yy, Zz;
+    // Variables
+    private Button Aa, Aa_, Bb, Dd, Ee, Ee_, Ff, Gg, Hh, Ii, Jj, Kk, Ll, Mm, Nn, Nn_, Oo, Oo_, Pp, Rr, Ss, Tt, Uu, Uu_, Xx, Yy, Zz, Juego2;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alphabet);
 
+        // Mostrar el título
         this.setTitle(Title);
 
+        // Inicializar la variable para reproducir el sonido
+        mediaPlayer = new MediaPlayer();
+
+        // Inicializar el listener de cada botón seguido de referenciar el ID de cada botón
         Aa = findViewById(R.id.Aa);
-        MediaPlayer mpAa = MediaPlayer.create(this, R.raw.a);
-        Aa.setOnClickListener(v -> mpAa.start());
-
+        Aa.setOnClickListener(this::onClick);
         Aa_ = findViewById(R.id.Aa_);
-        MediaPlayer mpAa_ = MediaPlayer.create(this, R.raw.a_puntitos);
-        Aa_.setOnClickListener(v -> mpAa_.start());
-
+        Aa_.setOnClickListener(this::onClick);
         Bb = findViewById(R.id.Bb);
-        MediaPlayer mpBb = MediaPlayer.create(this, R.raw.b);
-        Bb.setOnClickListener(v -> mpBb.start());
-
+        Bb.setOnClickListener(this::onClick);
         Dd = findViewById(R.id.Dd);
-        MediaPlayer mpDd = MediaPlayer.create(this, R.raw.d);
-        Dd.setOnClickListener(v -> mpDd.start());
-
+        Dd.setOnClickListener(this::onClick);
         Ee = findViewById(R.id.Ee);
-        MediaPlayer mpEe = MediaPlayer.create(this, R.raw.e);
-        Ee.setOnClickListener(v -> mpEe.start());
-
+        Ee.setOnClickListener(this::onClick);
         Ee_ = findViewById(R.id.Ee_);
-        MediaPlayer mpEe_ = MediaPlayer.create(this, R.raw.e);
-        Ee_.setOnClickListener(v -> mpEe_.start());
-
+        Ee_.setOnClickListener(this::onClick);
         Ff = findViewById(R.id.Ff);
-        MediaPlayer mpFf = MediaPlayer.create(this, R.raw.f);
-        Ff.setOnClickListener(v -> mpFf.start());
-
+        Ff.setOnClickListener(this::onClick);
         Gg = findViewById(R.id.Gg);
-        MediaPlayer mpGg = MediaPlayer.create(this, R.raw.g);
-        Gg.setOnClickListener(v -> mpGg.start());
-
+        Gg.setOnClickListener(this::onClick);
         Hh = findViewById(R.id.Hh);
-        MediaPlayer mpHh = MediaPlayer.create(this, R.raw.h);
-        Hh.setOnClickListener(v -> mpHh.start());
-
+        Hh.setOnClickListener(this::onClick);
         Ii = findViewById(R.id.Ii);
-        MediaPlayer mpIi = MediaPlayer.create(this, R.raw.i);
-        Ii.setOnClickListener(v -> mpIi.start());
-
+        Ii.setOnClickListener(this::onClick);
         Jj = findViewById(R.id.Jj);
-        MediaPlayer mpJj = MediaPlayer.create(this, R.raw.j);
-        Jj.setOnClickListener(v -> mpJj.start());
-
+        Jj.setOnClickListener(this::onClick);
         Kk = findViewById(R.id.Kk);
-        MediaPlayer mpKk = MediaPlayer.create(this, R.raw.k);
-        Kk.setOnClickListener(v -> mpKk.start());
-
+        Kk.setOnClickListener(this::onClick);
         Ll = findViewById(R.id.Ll);
-        MediaPlayer mpLl = MediaPlayer.create(this, R.raw.l);
-        Ll.setOnClickListener(v -> mpLl.start());
-
+        Ll.setOnClickListener(this::onClick);
         Mm = findViewById(R.id.Mm);
-        MediaPlayer mpMm = MediaPlayer.create(this, R.raw.m);
-        Mm.setOnClickListener(v -> mpMm.start());
-
+        Mm.setOnClickListener(this::onClick);
         Nn = findViewById(R.id.Nn);
-        MediaPlayer mpNn = MediaPlayer.create(this, R.raw.n);
-        Nn.setOnClickListener(v -> mpNn.start());
-
+        Nn.setOnClickListener(this::onClick);
         Nn_ = findViewById(R.id.Nn_);
-        MediaPlayer mpNn_ = MediaPlayer.create(this, R.raw.n_cejita);
-        Nn_.setOnClickListener(v -> mpNn_.start());
-
+        Nn_.setOnClickListener(this::onClick);
         Oo = findViewById(R.id.Oo);
-        MediaPlayer mpOo = MediaPlayer.create(this, R.raw.o);
-        Oo.setOnClickListener(v -> mpOo.start());
-
+        Oo.setOnClickListener(this::onClick);
         Oo_ = findViewById(R.id.O̲o̲);
-        MediaPlayer mpOo_ = MediaPlayer.create(this, R.raw.o_);
-        Oo_.setOnClickListener(v -> mpOo_.start());
-
+        Oo_.setOnClickListener(this::onClick);
         Pp = findViewById(R.id.Pp);
-        MediaPlayer mpPp = MediaPlayer.create(this, R.raw.p);
-        Pp.setOnClickListener(v -> mpPp.start());
-
+        Pp.setOnClickListener(this::onClick);
         Rr = findViewById(R.id.Rr);
-        MediaPlayer mpRr = MediaPlayer.create(this, R.raw.r);
-        Rr.setOnClickListener(v -> mpRr.start());
-
+        Rr.setOnClickListener(this::onClick);
         Ss = findViewById(R.id.Ss);
-        MediaPlayer mpSs = MediaPlayer.create(this, R.raw.s);
-        Ss.setOnClickListener(v -> mpSs.start());
-
+        Ss.setOnClickListener(this::onClick);
         Tt = findViewById(R.id.Tt);
-        MediaPlayer mpTt = MediaPlayer.create(this, R.raw.t);
-        Tt.setOnClickListener(v -> mpTt.start());
-
+        Tt.setOnClickListener(this::onClick);
         Uu = findViewById(R.id.Uu);
-        MediaPlayer mpUu = MediaPlayer.create(this, R.raw.u);
-        Uu.setOnClickListener(v -> mpUu.start());
-
+        Uu.setOnClickListener(this::onClick);
         Uu_ = findViewById(R.id.U̲u̲);
-        MediaPlayer mpUu_ = MediaPlayer.create(this, R.raw.u_);
-        Uu_.setOnClickListener(v -> mpUu_.start());
-
+        Uu_.setOnClickListener(this::onClick);
         Xx = findViewById(R.id.Xx);
-        MediaPlayer mpXx = MediaPlayer.create(this, R.raw.x);
-        Xx.setOnClickListener(v -> mpXx.start());
-
+        Xx.setOnClickListener(this::onClick);
         Yy = findViewById(R.id.Yy);
-        MediaPlayer mpYy = MediaPlayer.create(this, R.raw.y);
-        Yy.setOnClickListener(v -> mpYy.start());
-
+        Yy.setOnClickListener(this::onClick);
         Zz = findViewById(R.id.Zz);
-        MediaPlayer mpZz = MediaPlayer.create(this, R.raw.z);
-        Zz.setOnClickListener(v -> mpZz.start());
+        Zz.setOnClickListener(this::onClick);
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public void onClick(View view) {
+        // Detén la reproducción anterior si está en curso
+        if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+        }
+
+        // Sentencia switch para reproducir la pronuciación según sea el caso
+        switch (view.getId()) {
+            case R.id.Aa:
+                // Reproducción de a
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.a);
+                mediaPlayer.start();
+                break;
+            case R.id.Aa_:
+                // Reproducción de ä
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.a_puntitos);
+                mediaPlayer.start();
+                break;
+            case R.id.Bb:
+                // Reproducción de b
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.b);
+                mediaPlayer.start();
+                break;
+            case R.id.Dd:
+                // Reproducción de d
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.d);
+                mediaPlayer.start();
+                break;
+            case R.id.Ee:
+                // Reproducción de e
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.e);
+                mediaPlayer.start();
+                break;
+            case R.id.Ee_:
+                // Reproducción de e
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.e_);
+                mediaPlayer.start();
+                break;
+            case R.id.Ff:
+                // Reproducción de f
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.f);
+                mediaPlayer.start();
+                break;
+            case R.id.Gg:
+                // Reproducción de g
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.g);
+                mediaPlayer.start();
+                break;
+            case R.id.Hh:
+                // Reproducción de h
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.h);
+                mediaPlayer.start();
+                break;
+            case R.id.Ii:
+                // Reproducción de i
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.i);
+                mediaPlayer.start();
+                break;
+            case R.id.Jj:
+                // Reproducción de j
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.j);
+                mediaPlayer.start();
+                break;
+            case R.id.Kk:
+                // Reproducción de k
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.k);
+                mediaPlayer.start();
+                break;
+            case R.id.Ll:
+                // Reproducción de l
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.l);
+                mediaPlayer.start();
+                break;
+            case R.id.Mm:
+                // Reproducción de m
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.m);
+                mediaPlayer.start();
+                break;
+            case R.id.Nn:
+                // Reproducción de n
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.n);
+                mediaPlayer.start();
+                break;
+            case R.id.Nn_:
+                // Reproducción de ñ
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.n_cejita);
+                mediaPlayer.start();
+                break;
+            case R.id.Oo:
+                // Reproducción de o
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.o);
+                mediaPlayer.start();
+                break;
+            case R.id.O̲o̲:
+                // Reproducción de o
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.o_);
+                mediaPlayer.start();
+                break;
+            case R.id.Pp:
+                // Reproducción de p
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.p);
+                mediaPlayer.start();
+                break;
+            case R.id.Rr:
+                // Reproducción de r
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.r);
+                mediaPlayer.start();
+                break;
+            case R.id.Ss:
+                // Reproducción de s
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.s);
+                mediaPlayer.start();
+                break;
+            case R.id.Tt:
+                // Reproducción de t
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.t);
+                mediaPlayer.start();
+                break;
+            case R.id.Uu:
+                // Reproducción de u
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.u);
+                mediaPlayer.start();
+                break;
+            case R.id.U̲u̲:
+                // Reproducción de u
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.u_);
+                mediaPlayer.start();
+                break;
+            case R.id.Xx:
+                // Reproducción de x
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.x);
+                mediaPlayer.start();
+                break;
+            case R.id.Yy:
+                // Reproducción de y
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.y);
+                mediaPlayer.start();
+                break;
+            case R.id.Zz:
+                // Reproducción de z
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.z);
+                mediaPlayer.start();
+                break;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        // Libera recursos cuando la actividad se destruye
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+        }
+        super.onDestroy();
     }
 }

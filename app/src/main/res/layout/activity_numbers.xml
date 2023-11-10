@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:padding="15dp"
     tools:context=".NumbersActivity">
 
     <ScrollView
@@ -11,49 +13,224 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <GridLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
-                android:layout_width="175dp"
-                android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="0"
-                android:layout_gravity="top | center"
-                android:text="Uno | n'a"
-                android:textSize="20sp"
-                android:gravity="center" />
-
-            <ImageButton
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_row="1"
-                android:layout_column="0"
-                android:layout_gravity="center"
-                android:src="@drawable/uno"
-                android:background="#fff"/>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <TextView
-                android:layout_width="175dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_column="1"
-                android:layout_gravity="top | center"
-                android:text="Dos | yoho"
-                android:textSize="20sp"
-                android:gravity="center" />
-
-            <ImageButton
-                android:layout_width="175dp"
-                android:layout_height="175dp"
-                android:layout_row="1"
-                android:layout_column="1"
+                android:layout_margin="8dp"
+                android:text="Presiona los botones para escuchar la pronunciación"
+                android:textColor="#000"
+                android:textSize="28sp"
                 android:layout_gravity="center"
-                android:src="@drawable/dos"
-                android:background="#fff"/>
+                android:gravity="center"/>
 
-        </GridLayout>
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:text="Uno | n'a"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    android:gravity="center" />
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="16dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:src="@drawable/one"
+                    android:backgroundTint="#80ff5d56"/>
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="top | center"
+                    android:text="Dos | yoho"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    android:gravity="center" />
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="16dp"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:gravity="center"
+                    android:layout_gravity="top | center"
+                    android:src="@drawable/two"
+                    android:backgroundTint="#80ff5d56"/>
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="0"
+                    android:layout_gravity="top | center"
+                    android:text="Tres | hñu"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    android:gravity="center" />
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="16dp"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:src="@drawable/three"
+                    android:backgroundTint="#80ff5d56"/>
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="2"
+                    android:layout_column="1"
+                    android:layout_gravity="top | center"
+                    android:text="Cuatro | goho"
+                    android:textColor="#000"
+                    android:textSize="23sp"
+                    android:gravity="center" />
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="16dp"
+                    android:layout_row="3"
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:src="@drawable/four"
+                    android:backgroundTint="#80ff5d56"/>
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="4"
+                    android:layout_column="0"
+                    android:layout_gravity="top | center"
+                    android:text="Cinco | ku̲t'a"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    android:gravity="center" />
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="16dp"
+                    android:layout_row="5"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:src="@drawable/five"
+                    android:backgroundTint="#80ff5d56"/>
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="4"
+                    android:layout_column="1"
+                    android:layout_gravity="top | center"
+                    android:text="Seis | r'ato"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    android:gravity="center" />
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="16dp"
+                    android:layout_row="5"
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:src="@drawable/six"
+                    android:backgroundTint="#80ff5d56"/>
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="6"
+                    android:layout_column="0"
+                    android:layout_gravity="top | center"
+                    android:text="Siete | yoto"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    android:gravity="center" />
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="16dp"
+                    android:layout_row="7"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:src="@drawable/seven"
+                    android:backgroundTint="#80ff5d56"/>
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="6"
+                    android:layout_column="1"
+                    android:layout_gravity="top | center"
+                    android:text="Ocho | hñäto"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    android:gravity="center" />
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="16dp"
+                    android:layout_row="7"
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:src="@drawable/eight"
+                    android:backgroundTint="#80ff5d56"/>
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="8"
+                    android:layout_column="0"
+                    android:layout_gravity="top | center"
+                    android:text="Nueve | gu̲to"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    android:gravity="center" />
+
+                <ImageButton
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="16dp"
+                    android:layout_row="9"
+                    android:layout_column="0"
+                    android:layout_gravity="center"
+                    android:src="@drawable/nine"
+                    android:backgroundTint="#80ff5d56"/>
+
+            </GridLayout>
+
+        </LinearLayout>
 
     </ScrollView>
 
