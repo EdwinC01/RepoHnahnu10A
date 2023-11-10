@@ -16,6 +16,8 @@ import java.util.List;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
+import androidx.appcompat.app.AlertDialog;
+import android.content.DialogInterface;
 
 
 public class RelationWordsActivity extends AppCompatActivity {
@@ -105,6 +107,53 @@ public class RelationWordsActivity extends AppCompatActivity {
 
         button.startAnimation(shake);
     }
+    private void showCongratulationsDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("¡Felicidades!");
+        builder.setMessage("Has completado el juego.");
+        builder.setPositiveButton("Reiniciar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                resetGame();
+            }
+        });
+        builder.setNegativeButton("Salir", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish(); // Cierra la actividad
+            }
+        });
+        builder.setCancelable(false); // Evita que el usuario pueda cerrar la ventana emergente tocando fuera de ella
+        builder.show();
+    }
+
+    private void showFailureDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Fallaste");
+        builder.setMessage("Te has quedado sin intentos.");
+        builder.setPositiveButton("Reiniciar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                resetGame();
+            }
+        });
+        builder.setNegativeButton("Salir", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish(); // Cierra la actividad
+            }
+        });
+        builder.setCancelable(false);
+        builder.show();
+    }
+    private boolean allButtonsHidden() {
+        for (Button button : buttons) {
+            if (button.getVisibility() != View.GONE) {
+                return false; // Si encuentra un botón que no está oculto, retorna falso.
+            }
+        }
+        return true; // Si todos los botones están ocultos, retorna verdadero.
+    }
 
     private void checkAndChangeColors() {
         if (pairCounter == 2) {
@@ -125,6 +174,9 @@ public class RelationWordsActivity extends AppCompatActivity {
                         button2.setVisibility(View.GONE);
                         pairCounter = 0; // Reinicia contador de pares
                         selectedButtons.clear(); // Limpia lista de botones seleccionados
+                        if (allButtonsHidden()) {
+                            showCongratulationsDialog();
+                        }
                     }
                 }, 1000);
             } else {
@@ -147,7 +199,7 @@ public class RelationWordsActivity extends AppCompatActivity {
                 if (attempts == 0) {
 
                     // Si se agotan los intentos, reiniciar todo
-                    resetGame();
+                    showFailureDialog();
                 }
             }
 
