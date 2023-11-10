@@ -9,6 +9,8 @@ import android.view.animation.CycleInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import java.util.ArrayList;
 import java.util.List;
 import android.view.animation.Animation;
@@ -17,6 +19,7 @@ import android.view.animation.TranslateAnimation;
 
 
 public class RelationWordsActivity extends AppCompatActivity {
+    String Title = "Relacion de palabras";
 
     private List<Button> buttons = new ArrayList<>();
     private List<Button> selectedButtons = new ArrayList<>();
@@ -32,15 +35,36 @@ public class RelationWordsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_relation_words);
+        this.setTitle(Title);
 
 
-        buttons.add((Button) findViewById(R.id.button));
-        buttons.add((Button) findViewById(R.id.button2));
-        buttons.add((Button) findViewById(R.id.button3));
-        buttons.add((Button) findViewById(R.id.button4));
+        buttons.add((Button) findViewById(R.id.roj));
+        buttons.add((Button) findViewById(R.id.Amarillo));
+        buttons.add((Button) findViewById(R.id.azu));
+        buttons.add((Button) findViewById(R.id.Naranja));
+        buttons.add((Button) findViewById(R.id.Azul));
+        buttons.add((Button) findViewById(R.id.ama));
+        buttons.add((Button) findViewById(R.id.Blanco));
+        buttons.add((Button) findViewById(R.id.ver));
+        buttons.add((Button) findViewById(R.id.Gris));
+        buttons.add((Button) findViewById(R.id.Negro));
+        buttons.add((Button) findViewById(R.id.Rojo));
+        buttons.add((Button) findViewById(R.id.gri));
+        buttons.add((Button) findViewById(R.id.Verde));
+        buttons.add((Button) findViewById(R.id.nar));
+        buttons.add((Button) findViewById(R.id.bla));
+        buttons.add((Button) findViewById(R.id.neg));
 
 
-        String[] valores = {"Ejemplo1", "Ejemplo2", "Ejemplo3", "Ejemplo1"};
+
+
+
+
+
+        String[] valores = {"Rojo", "Amarillo", "Azul", "Naranja", "Azul", "Amarillo", "Blanco",
+                "Verde", "Gris", "Negro", "Rojo", "Gris", "Verde", "Naranja", "Blanco",
+                "Negro"
+        };
 
         // Inicializa el array de  clics
         isButtonClicked = new boolean[buttons.size()];
@@ -133,15 +157,20 @@ public class RelationWordsActivity extends AppCompatActivity {
     }
 
     private void resetColors() {
+        int lighterGrayColor = Color.rgb(210, 210,210);
+
         for (Button button : buttons) {
-            button.setBackgroundColor(Color.TRANSPARENT);
+            button.setBackgroundColor(lighterGrayColor);
         }
+
         for (int i = 0; i < isButtonClicked.length; i++) {
             isButtonClicked[i] = false;
         }
+
         pairCounter = 0; // Reinicia contador de pares
         selectedButtons.clear(); // Limpia lista de botones seleccionados
     }
+
 
     private void resetGame() {
         for (Button button : buttons) {
