@@ -34,6 +34,26 @@ public class RelationWordsActivity extends AppCompatActivity {
     private TextView attemptsTextView;
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        showWelcomeAlert();
+    }
+    private void showWelcomeAlert() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("¡Relaciona las palabras!");
+        builder.setMessage("Tienes 3 intentos para relacionar " +
+                "las palabras con su siginificado, si no el " +
+                "juego se reinicia.");
+        builder.setPositiveButton("Continuar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Acción al hacer clic en Cerrar
+                dialog.dismiss(); // Cierra el diálogo
+            }
+        });
+        builder.setCancelable(false); // Evita que el usuario pueda cerrar la ventana emergente tocando fuera de ella
+        builder.show();
+    }
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_relation_words);
@@ -111,7 +131,7 @@ public class RelationWordsActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("¡Felicidades!");
         builder.setMessage("Has completado el juego.");
-        builder.setPositiveButton("Reiniciar", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Volver a jugar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 resetGame();
@@ -198,7 +218,7 @@ public class RelationWordsActivity extends AppCompatActivity {
 
                 if (attempts == 0) {
 
-                    // Si se agotan los intentos, reiniciar todo
+                    // Si se agotan los intentos, reiniciar 
                     showFailureDialog();
                 }
             }
