@@ -41,9 +41,9 @@ public class RelationWordsActivity extends AppCompatActivity {
     private void showWelcomeAlert() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("¡Relaciona las palabras!");
-        builder.setMessage("Tienes 3 intentos para relacionar " +
-                "las palabras con su siginificado, si no el " +
-                "juego se reinicia.");
+        builder.setMessage("Relaciona las palabras con su significado correspondiente \n \n" +
+                "" +
+                "Tienes 3 intentos para relacionarlas, de lo contrario el juego termina.");
         builder.setPositiveButton("Continuar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
