@@ -5,21 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.Toolbar;
 
 public class ColorsActivity extends AppCompatActivity {
     String Title = "COLORES | Yä thuhu yä kuhu";
 
     ImageButton imgBtnYellow, imgBtnOrange, imgBtnBlue, imgBtnWhite, imgBtnGray, imgBtnBlack, imgBtnRed, imgBtnGreen;
-    private Button Juego1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_colors);
-
-        this.setTitle(Title);
 
         imgBtnYellow = findViewById(R.id.amarillo);
         MediaPlayer mpYel = MediaPlayer.create(this, R.raw.amarillo);
@@ -33,14 +33,6 @@ public class ColorsActivity extends AppCompatActivity {
         MediaPlayer mpBlu = MediaPlayer.create(this, R.raw.azul);
         imgBtnBlue.setOnClickListener(v -> mpBlu.start());
 
-        imgBtnWhite = findViewById(R.id.blanco);
-        MediaPlayer mpWhi = MediaPlayer.create(this, R.raw.frag_expl_water1);
-        imgBtnWhite.setOnClickListener(v -> mpWhi.start());
-
-        imgBtnGray = findViewById(R.id.gris);
-        MediaPlayer mpGra = MediaPlayer.create(this, R.raw.gris);
-        imgBtnGray.setOnClickListener(v -> mpGra.start());
-
         imgBtnBlack = findViewById(R.id.negro);
         MediaPlayer mpBla = MediaPlayer.create(this, R.raw.negro);
         imgBtnBlack.setOnClickListener(v -> mpBla.start());
@@ -52,8 +44,17 @@ public class ColorsActivity extends AppCompatActivity {
         imgBtnGreen = findViewById(R.id.verde);
         MediaPlayer mpGre = MediaPlayer.create(this, R.raw.verde);
         imgBtnGreen.setOnClickListener(v -> mpGre.start());
+    }
 
-        Juego1 = findViewById(R.id.btnJuego1);
-        Juego1.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), RelationWordsActivity.class)));
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

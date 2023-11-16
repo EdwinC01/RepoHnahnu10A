@@ -1,180 +1,339 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="15dp"
     tools:context=".ColorsActivity">
+    <include layout="@layout/toolbar" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_below="@id/top_text">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <GridLayout
+        android:id="@+id/top_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:background="#fff">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            app:cardCornerRadius="15dp"
+            android:layout_row="0"
+            android:layout_gravity="fill"
+            android:layout_margin="6dp"
+            android:layout_column="0"
+            app:cardElevation="12dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <TextView
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageButton
+                    android:id="@+id/amarillo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/amarillo_copia"
+                    android:background="#fff"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amarillo | k'ast'i"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_row="0"
+            android:layout_gravity="fill"
+            android:layout_margin="6dp"
+            android:layout_column="1"
+            app:cardElevation="12dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:text="Presiona los botones para escuchar la pronunciación"
-                android:textColor="#000"
-                android:textSize="28sp"
-                android:layout_gravity="center"
-                android:gravity="center"/>
+                <ImageButton
+                    android:id="@+id/azul"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#fff"
+                    android:src="@drawable/anaranjado" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:layout_gravity="top | center"
-                android:text="amarillo | k'ast'i"
-                android:textSize="28sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Anaranjado \n| nanxa"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-            <ImageButton
-                android:id="@+id/amarillo"
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_row="1"
+            android:layout_gravity="fill"
+            android:layout_margin="6dp"
+            android:layout_column="0"
+            app:cardElevation="12dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
-                android:layout_margin="16dp"
-                android:background="#fff"
-                android:layout_gravity="center"
-                android:src="@drawable/amarillo" />
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="16dp"
-                android:layout_gravity="top | center"
-                android:text="anaranjado | nanxa"
-                android:textSize="28sp" />
+                <ImageButton
+                    android:id="@+id/naranja"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#fff"
+                    android:src="@drawable/azul" />
 
-            <ImageButton
-                android:id="@+id/naranja"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Azul | ixki"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_row="1"
+            android:layout_gravity="fill"
+            android:layout_margin="6dp"
+            android:layout_column="1"
+            app:cardElevation="12dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
-                android:layout_margin="16dp"
-                android:layout_gravity="center"
-                android:background="#fff"
-                android:src="@drawable/anaranjado" />
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top | center"
-                android:text="azul | ìxki"
-                android:textSize="28sp" />
+                <ImageButton
+                    android:id="@+id/negro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#fff"
+                    android:src="@drawable/negro" />
 
-            <ImageButton
-                android:id="@+id/azul"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Negro | mbo'i"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_row="2"
+            android:layout_gravity="fill"
+            android:layout_margin="6dp"
+            android:layout_column="1"
+            app:cardElevation="12dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
-                android:layout_margin="16dp"
-                android:background="#fff"
-                android:layout_gravity="center"
-                android:src="@drawable/azul" />
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top | center"
-                android:text="blanco | t'axi"
-                android:textSize="28sp" />
+                <ImageButton
+                    android:id="@+id/rojo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#fff"
+                    android:src="@drawable/rojo" />
 
-            <ImageButton
-                android:id="@+id/blanco"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Rojo | the̲ni"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_row="2"
+            android:layout_gravity="fill"
+            android:layout_margin="6dp"
+            android:layout_column="0"
+            app:cardElevation="12dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
-                android:layout_margin="16dp"
-                android:layout_gravity="center"
-                android:background="#fff"
-                android:src="@drawable/blanco" />
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top | center"
-                android:text="gris | b'ospi"
-                android:textSize="28sp" />
+                <ImageButton
+                    android:id="@+id/verde"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#fff"
+                    android:src="@drawable/verde" />
 
-            <ImageButton
-                android:id="@+id/gris"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Verde | k'angi"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_row="3"
+            android:layout_gravity="fill"
+            android:layout_margin="6dp"
+            android:layout_column="0"
+            app:cardElevation="12dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
-                android:layout_margin="16dp"
-                android:layout_gravity="center"
-                android:background="#fff"
-                android:src="@drawable/gris" />
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top | center"
-                android:text="negro | mbo'i - mbot'i"
-                android:textSize="28sp" />
+                <ImageButton
+                    android:id="@+id/blanco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#fff"
+                    android:src="@drawable/blanco" />
 
-            <ImageButton
-                android:id="@+id/negro"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Blanco | t'axi"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_row="3"
+            android:layout_gravity="fill"
+            android:layout_margin="6dp"
+            android:layout_column="1"
+            app:cardElevation="12dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="175dp"
-                android:layout_margin="16dp"
-                android:layout_gravity="center"
-                android:background="#fff"
-                android:src="@drawable/negro" />
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="rojo | the̲ni"
-                android:textSize="28sp" />
+                <ImageButton
+                    android:id="@+id/gris"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#fff"
+                    android:src="@drawable/gris" />
 
-            <ImageButton
-                android:id="@+id/rojo"
-                android:layout_width="match_parent"
-                android:layout_height="175dp"
-                android:layout_margin="16dp"
-                android:layout_gravity="center"
-                android:background="#fff"
-                android:src="@drawable/rojo" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Gris | b'ospi"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="verde | k'angi"
-                android:textSize="28sp" />
+            </LinearLayout>
 
-            <ImageButton
-                android:id="@+id/verde"
-                android:layout_width="match_parent"
-                android:layout_height="175dp"
-                android:layout_margin="16dp"
-                android:layout_gravity="center"
-                android:background="#fff"
-                android:src="@drawable/verde" />
+        </androidx.cardview.widget.CardView>
 
-            <Button
-                android:id="@+id/btnJuego1"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:text="Juego"
-                android:backgroundTint="#80ff5d56"/>
-
-        </LinearLayout>
+    </GridLayout>
 
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/top_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Presiona los botones para escuchar\nla pronunciación"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="70dp" />
+
+</RelativeLayout>

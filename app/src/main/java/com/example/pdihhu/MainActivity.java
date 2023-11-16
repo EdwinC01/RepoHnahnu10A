@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
-    Button Act1, Act2, Act3, Act4;
+    private ImageButton Act1, Act2, Act3, Act4;
+    private Button Juego1;
     String Title = "Pädi Hñähñu";
 
     @Override
@@ -16,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        this.setTitle(Title);
         Act1 = findViewById(R.id.btnAct1);
         Act1.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), ColorsActivity.class)));
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Act4 = findViewById(R.id.btnAct4);
         Act4.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), SaludosActivity.class)));
 
-
+        Juego1 = findViewById(R.id.btnJuego1);
+        Juego1.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), RelationWordsActivity.class)));
     }
 }
