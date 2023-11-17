@@ -5,18 +5,11 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/pdihhu"
-        android:label="@string/app_name"
+        android:label="Pädi Hñähñu"
         android:roundIcon="@mipmap/pdihhu_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Design.Light">
-        <activity android:name=".activityScrable">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+        android:theme="@style/Theme.Design.Light.NoActionBar">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
         <activity android:name=".RelationWordsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
