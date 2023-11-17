@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/pdihhu_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light">
+        <activity android:name=".activityScrable">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".RelationWordsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

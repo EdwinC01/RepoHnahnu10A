@@ -13,6 +13,7 @@ public class ColorsActivity extends AppCompatActivity {
 
     ImageButton imgBtnYellow, imgBtnOrange, imgBtnBlue, imgBtnWhite, imgBtnGray, imgBtnBlack, imgBtnRed, imgBtnGreen;
     private Button Juego1;
+    private Button JuegoScrabble;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,5 +56,8 @@ public class ColorsActivity extends AppCompatActivity {
 
         Juego1 = findViewById(R.id.btnJuego1);
         Juego1.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), RelationWordsActivity.class)));
+
+        JuegoScrabble = findViewById(R.id.btnJuegoScrabble);
+        JuegoScrabble.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), activityScrable.class)));
     }
 }

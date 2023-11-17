@@ -173,6 +173,15 @@
                 android:text="Juego"
                 android:backgroundTint="#80ff5d56"/>
 
+
+            <Button
+                android:id="@+id/btnJuegoScrabble"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:text="Scrabble"
+                android:backgroundTint="#80ff5d56"/>
+
         </LinearLayout>
 
     </ScrollView>
