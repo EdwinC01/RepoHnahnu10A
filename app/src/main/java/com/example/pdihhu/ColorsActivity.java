@@ -15,6 +15,7 @@ public class ColorsActivity extends AppCompatActivity {
     String Title = "COLORES | Yä thuhu yä kuhu";
 
     ImageButton imgBtnYellow, imgBtnOrange, imgBtnBlue, imgBtnWhite, imgBtnGray, imgBtnBlack, imgBtnRed, imgBtnGreen;
+    Button scrabble;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,9 @@ public class ColorsActivity extends AppCompatActivity {
         imgBtnGreen = findViewById(R.id.verde);
         MediaPlayer mpGre = MediaPlayer.create(this, R.raw.verde);
         imgBtnGreen.setOnClickListener(v -> mpGre.start());
+
+        scrabble = findViewById(R.id.btnJuegoScrabble);
+        scrabble.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), activityScrable.class)));
     }
 
     @Override
