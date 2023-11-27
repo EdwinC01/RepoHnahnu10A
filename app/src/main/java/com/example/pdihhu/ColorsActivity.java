@@ -6,59 +6,105 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toolbar;
 
-public class ColorsActivity extends AppCompatActivity {
+public class ColorsActivity extends AppCompatActivity implements View.OnClickListener {
     String Title = "COLORES | Yä thuhu yä kuhu";
 
-    ImageButton imgBtnYellow, imgBtnOrange, imgBtnBlue, imgBtnWhite, imgBtnGray, imgBtnBlack, imgBtnRed, imgBtnGreen;
-    Button scrabble;
+    ImageButton imgBtnYellow, imgBtnOrange, imgBtnBlue, imgBtnWhite, imgBtnGray, imgBtnBlack, imgBtnRed, imgBtnGreen, imgBtnPink;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_colors);
 
+        mediaPlayer = new MediaPlayer();
+
         imgBtnYellow = findViewById(R.id.amarillo);
-        MediaPlayer mpYel = MediaPlayer.create(this, R.raw.amarillo);
-        imgBtnYellow.setOnClickListener(v -> mpYel.start());
+        imgBtnYellow.setOnClickListener(this::onClick);
 
         imgBtnOrange = findViewById(R.id.naranja);
-        MediaPlayer mpOra = MediaPlayer.create(this, R.raw.anaranjado);
-        imgBtnOrange.setOnClickListener(v -> mpOra.start());
+        imgBtnOrange.setOnClickListener(this::onClick);
 
         imgBtnBlue = findViewById(R.id.azul);
-        MediaPlayer mpBlu = MediaPlayer.create(this, R.raw.azul);
-        imgBtnBlue.setOnClickListener(v -> mpBlu.start());
+        imgBtnBlue.setOnClickListener(this::onClick);
 
         imgBtnBlack = findViewById(R.id.negro);
-        MediaPlayer mpBla = MediaPlayer.create(this, R.raw.negro);
-        imgBtnBlack.setOnClickListener(v -> mpBla.start());
+        imgBtnBlack.setOnClickListener(this::onClick);
 
         imgBtnRed = findViewById(R.id.rojo);
-        MediaPlayer mpRed = MediaPlayer.create(this, R.raw.rojo);
-        imgBtnRed.setOnClickListener(v -> mpRed.start());
+        imgBtnRed.setOnClickListener(this::onClick);
 
         imgBtnGreen = findViewById(R.id.verde);
-        MediaPlayer mpGre = MediaPlayer.create(this, R.raw.verde);
-        imgBtnGreen.setOnClickListener(v -> mpGre.start());
+        imgBtnGreen.setOnClickListener(this::onClick);
 
-        scrabble = findViewById(R.id.btnJuegoScrabble);
-        scrabble.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), activityScrable.class)));
+        imgBtnGray = findViewById(R.id.gris);
+        imgBtnGray.setOnClickListener(this::onClick);
+
+        imgBtnWhite = findViewById(R.id.blanco);
+        imgBtnWhite.setOnClickListener(this::onClick);
+
+        imgBtnPink = findViewById(R.id.rosa);
+        imgBtnPink.setOnClickListener(this::onClick);
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
+    public void onClick(View view) {
+        if (mediaPlayer.isPlaying()) {
+            mediaPlayer.stop();
+            mediaPlayer.reset();
         }
+        switch (view.getId()) {
+            case R.id.amarillo:
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.amarillo);
+                mediaPlayer.start();
+                break;
+            case R.id.azul:
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.azul);
+                mediaPlayer.start();
+                break;
+            case R.id.naranja:
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.anaranjado);
+                mediaPlayer.start();
+                break;
+            case R.id.negro:
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.negro);
+                mediaPlayer.start();
+                break;
+            case R.id.verde:
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.verde);
+                mediaPlayer.start();
+                break;
+            case R.id.rojo:
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.rojo);
+                mediaPlayer.start();
+                break;
+            case R.id.gris:
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.gris);
+                mediaPlayer.start();
+                break;
+            case R.id.blanco:
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.frag_expl_water1);
+                mediaPlayer.start();
+                break;
+            case R.id.rosa:
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.rosa);
+                mediaPlayer.start();
+                break;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        // Libera recursos cuando la actividad se destruye
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+        }
+        super.onDestroy();
     }
 }

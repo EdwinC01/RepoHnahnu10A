@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:background="#7C3030">
     <RelativeLayout
+        android:id="@+id/toolgame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
@@ -19,9 +20,11 @@
             android:layout_marginStart="16dp"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@id/left_icon"
-            android:text="EL ALFABETO HÑÄHÑU | RA HMUNTS'A NSIHNI HÑÄHÑU"
+            android:text="Juegos"
             android:textColor="@color/white"
-            android:textSize="14sp" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/alloy_ink"/>
     </RelativeLayout>
 
 </RelativeLayout>

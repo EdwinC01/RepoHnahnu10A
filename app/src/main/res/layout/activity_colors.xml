@@ -4,33 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/coral"
     android:orientation="vertical"
     tools:context=".ColorsActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_view"/>
+
     <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/card_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            app:cardCornerRadius="15dp"
+            android:layout_gravity="center"
+            android:layout_below="@id/top_text">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center | top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/okashi_regular"
+                    android:text="APRENDE\nHÑÄHÑU\nJUGANDO"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/girl" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/top_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Presiona los botones para escuchar\nla pronunciación"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="15dp" />
+
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/top_text"
+        android:layout_below="@id/card_color"
         android:orientation="vertical">
 
         <GridLayout
             android:id="@+id/top_grid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/top_text"
+            android:layout_below="@id/card_color"
+            android:rowCount="5"
+            android:columnCount="2"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="#fff">
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="fill"
+            android:gravity="center">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
                 android:layout_row="0"
-                android:layout_gravity="fill"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:layout_margin="6dp"
                 android:layout_marginBottom="32dp"
                 android:layout_column="0"
@@ -44,17 +110,21 @@
 
                     <ImageButton
                         android:id="@+id/amarillo"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/amarillo_copia"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:layout_margin="6dp"
+                        android:src="@drawable/cir_ama"
                         android:background="#fff"
-                        android:layout_gravity="center_horizontal" />
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Amarillo | k'ast'i"
-                        android:layout_gravity="center_horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:fontFamily="@font/okashi_regular"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:textColor="@color/black" />
@@ -64,11 +134,11 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="140dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
                 android:layout_row="0"
-                android:layout_gravity="fill"
+                android:layout_gravity="center"
                 android:layout_margin="6dp"
                 android:layout_marginBottom="32dp"
                 android:layout_column="1"
@@ -82,18 +152,22 @@
 
                     <ImageButton
                         android:id="@+id/azul"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_gravity="center_horizontal"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:layout_margin="6dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
                         android:background="#fff"
-                        android:src="@drawable/anaranjado" />
+                        android:src="@drawable/cir_azul" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="Anaranjado \n| nanxa"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Azul | ixki"
                         android:textColor="@color/black"
+                        android:fontFamily="@font/okashi_regular"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -102,7 +176,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="140dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
                 android:layout_row="1"
@@ -121,19 +195,22 @@
 
                     <ImageButton
                         android:id="@+id/naranja"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:layout_margin="6dp"
                         android:layout_gravity="center_horizontal"
                         android:background="#fff"
-                        android:src="@drawable/azul" />
+                        android:src="@drawable/nar" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:text="Azul | ixki"
+                        android:gravity="center"
+                        android:text="Anaranjado | nanxa"
                         android:textColor="@color/black"
-                        android:textSize="18sp"
+                        android:fontFamily="@font/okashi_regular"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -141,11 +218,11 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="140dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
                 android:layout_row="1"
-                android:layout_gravity="fill"
+                android:layout_gravity="center"
                 android:layout_margin="6dp"
                 android:layout_marginTop="-12dp"
                 android:layout_marginBottom="32dp"
@@ -160,18 +237,20 @@
 
                     <ImageButton
                         android:id="@+id/negro"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:layout_margin="6dp"
+                        android:layout_gravity="center"
                         android:background="#fff"
-                        android:src="@drawable/negro" />
+                        android:src="@drawable/cir_neg" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
+                        android:layout_gravity="center"
                         android:text="Negro | mbo'i"
                         android:textColor="@color/black"
+                        android:fontFamily="@font/okashi_regular"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -180,11 +259,11 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="140dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
                 android:layout_row="2"
-                android:layout_gravity="fill"
+                android:layout_gravity="center"
                 android:layout_margin="6dp"
                 android:layout_marginTop="-12dp"
                 android:layout_marginBottom="32dp"
@@ -199,11 +278,12 @@
 
                     <ImageButton
                         android:id="@+id/rojo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:layout_margin="6dp"
                         android:layout_gravity="center_horizontal"
                         android:background="#fff"
-                        android:src="@drawable/rojo" />
+                        android:src="@drawable/cir_rojo" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -211,6 +291,7 @@
                         android:layout_gravity="center_horizontal"
                         android:text="Rojo | the̲ni"
                         android:textColor="@color/black"
+                        android:fontFamily="@font/okashi_regular"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -219,11 +300,11 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:layout_width="140dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
                 android:layout_row="2"
-                android:layout_gravity="fill"
+                android:layout_gravity="center"
                 android:layout_margin="6dp"
                 android:layout_marginTop="-12dp"
                 android:layout_marginBottom="32dp"
@@ -238,11 +319,12 @@
 
                     <ImageButton
                         android:id="@+id/verde"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:layout_margin="6dp"
                         android:layout_gravity="center_horizontal"
                         android:background="#fff"
-                        android:src="@drawable/verde" />
+                        android:src="@drawable/cir_ver" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -250,6 +332,7 @@
                         android:layout_gravity="center_horizontal"
                         android:text="Verde | k'angi"
                         android:textColor="@color/black"
+                        android:fontFamily="@font/okashi_regular"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -262,7 +345,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
                 android:layout_row="3"
-                android:layout_gravity="fill"
+                android:layout_gravity="center"
                 android:layout_margin="6dp"
                 android:layout_marginTop="-12dp"
                 android:layout_marginBottom="32dp"
@@ -277,11 +360,12 @@
 
                     <ImageButton
                         android:id="@+id/blanco"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:layout_margin="6dp"
                         android:layout_gravity="center_horizontal"
                         android:background="#fff"
-                        android:src="@drawable/blanco" />
+                        android:src="@drawable/cir_bla" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -289,6 +373,7 @@
                         android:layout_gravity="center_horizontal"
                         android:text="Blanco | t'axi"
                         android:textColor="@color/black"
+                        android:fontFamily="@font/okashi_regular"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
@@ -301,7 +386,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
                 android:layout_row="3"
-                android:layout_gravity="fill"
+                android:layout_gravity="center"
                 android:layout_margin="6dp"
                 android:layout_marginTop="-12dp"
                 android:layout_marginBottom="32dp"
@@ -316,11 +401,12 @@
 
                     <ImageButton
                         android:id="@+id/gris"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:layout_margin="6dp"
                         android:layout_gravity="center_horizontal"
                         android:background="#fff"
-                        android:src="@drawable/gris" />
+                        android:src="@drawable/cir_gris" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -329,7 +415,8 @@
                         android:text="Gris | b'ospi"
                         android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/okashi_regular" />
 
                 </LinearLayout>
 
@@ -340,7 +427,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="15dp"
                 android:layout_row="4"
-                android:layout_gravity="fill"
+                android:layout_gravity="center"
                 android:layout_margin="6dp"
                 android:layout_marginTop="-12dp"
                 android:layout_marginBottom="32dp"
@@ -353,21 +440,65 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/btnJuegoScrabble"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:text="Scrabble"
-                        android:backgroundTint="#80ff5d56"/>
+                    <ImageButton
+                        android:id="@+id/rosa"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:layout_margin="6dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#fff"
+                        android:src="@drawable/cir_rosa" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:text="Juego Scrabble"
+                        android:text="Rosa | noxa"
                         android:textColor="@color/black"
                         android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/okashi_regular" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="15dp"
+                android:layout_row="4"
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+                android:layout_marginTop="-12dp"
+                android:layout_marginBottom="32dp"
+                android:layout_column="1"
+                app:cardElevation="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/cafe"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:layout_margin="6dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#fff"
+                        android:src="@drawable/cir_cafe" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Café | b'othe"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/okashi_regular" />
 
                 </LinearLayout>
 
@@ -376,18 +507,5 @@
         </GridLayout>
 
     </ScrollView>
-
-    <TextView
-        android:id="@+id/top_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Presiona los botones para escuchar\nla pronunciación"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:layout_marginTop="70dp" />
-
 
 </RelativeLayout>

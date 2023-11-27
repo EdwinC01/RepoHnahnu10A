@@ -12,6 +12,14 @@
         android:layout_height="200dp"
         android:background="@drawable/bg_view"/>
 
+    <View
+        android:id="@+id/game_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bottom_game"
+        android:layout_below="@id/top_grid"
+        android:layout_marginTop="-100dp"/>
+
     <GridLayout
         android:id="@+id/top_grid"
         android:layout_width="match_parent"
@@ -20,9 +28,10 @@
         android:columnCount="3"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="-80dp"
-        android:layout_marginBottom="90dp"
-        android:layout_below="@+id/top_view">
+        android:layout_marginTop="-55dp"
+        android:layout_marginBottom="110dp"
+        android:gravity="center"
+        android:layout_below="@id/top_view">
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
@@ -33,6 +42,8 @@
             android:layout_row="0"
             android:layout_gravity="fill"
             android:layout_margin="6dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
             android:layout_column="0"
             app:cardElevation="12dp">
 
@@ -44,8 +55,8 @@
 
                 <ImageButton
                     android:id="@+id/btnAct1"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@drawable/colores"
                     android:background="#fff"
                     android:layout_gravity="center_horizontal"/>
@@ -53,10 +64,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Colores"
+                    android:text="Colores\n"
                     android:layout_gravity="center_horizontal"
                     android:textSize="18sp"
-                    android:textStyle="bold"
+                    android:fontFamily="@font/okashi_regular"
                     android:textColor="@color/black" />
 
             </LinearLayout>
@@ -72,6 +83,7 @@
             android:layout_row="0"
             android:layout_gravity="fill"
             android:layout_margin="6dp"
+            android:layout_marginBottom="1dp"
             android:layout_column="1"
             app:cardElevation="12dp">
 
@@ -83,8 +95,8 @@
 
                 <ImageButton
                     android:id="@+id/btnAct2"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:background="#fff"
                     android:src="@drawable/alfabeto" />
@@ -93,10 +105,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Alfabeto"
+                    android:text="Alfabeto\n"
                     android:textColor="@color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:fontFamily="@font/okashi_regular" />
 
             </LinearLayout>
 
@@ -111,6 +124,8 @@
             android:layout_row="1"
             android:layout_gravity="fill"
             android:layout_margin="6dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="10dp"
             android:layout_column="0"
             app:cardElevation="12dp">
 
@@ -122,8 +137,8 @@
 
                 <ImageButton
                     android:id="@+id/btnAct3"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@drawable/numeros"
                     android:background="#fff"
                     android:layout_gravity="center_horizontal"/>
@@ -131,11 +146,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Números"
+                    android:text="Números\n"
                     android:layout_gravity="center_horizontal"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/okashi_regular" />
 
             </LinearLayout>
 
@@ -150,6 +166,8 @@
             android:layout_row="1"
             android:layout_gravity="fill"
             android:layout_margin="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="10dp"
             android:layout_column="1"
             app:cardElevation="12dp">
 
@@ -161,8 +179,8 @@
 
                 <ImageButton
                     android:id="@+id/btnAct4"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:src="@drawable/semana"
                     android:background="#fff"
                     android:layout_gravity="center_horizontal"/>
@@ -170,11 +188,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Días de la \n semana"
+                    android:text="Días de la\nsemana"
                     android:layout_gravity="center_horizontal"
+                    android:gravity="center"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/okashi_regular" />
 
             </LinearLayout>
 
@@ -185,38 +205,47 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Menú Principal"
-        android:textSize="24sp"
+        android:text="Menu\nPrincipal"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/red"
+        android:fontFamily="@font/okashi_regular"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"/>
+        android:gravity="center"
+        android:layout_marginTop="25dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Selecciona una unidad de aprendizaje"
+        android:text="Selecciona una unidad \nde aprendizaje"
         android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="@color/black"
+        android:fontFamily="@font/okashi_regular"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"/>
+        android:gravity="center"
+        android:layout_marginTop="105dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Juegos de retroalimentación"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="550dp"/>
+        <ImageButton
+            android:id="@+id/gameScreen"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_baseline_keyboard_arrow_up_24"
+            android:background="#7C3030"
+            android:layout_marginTop="-65dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_below="@id/top_grid" />
 
-    <Button
-        android:id="@+id/btnJuego1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Juego1"
-        android:layout_marginTop="570dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Juegos de retroalimentación"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/gameScreen" />
 
 </RelativeLayout>

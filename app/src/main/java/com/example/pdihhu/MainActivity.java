@@ -9,8 +9,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
-    private ImageButton Act1, Act2, Act3, Act4;
-    private Button Juego1;
+    private ImageButton Act1, Act2, Act3, Act4, game;
     String Title = "Pädi Hñähñu";
 
     @Override
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Act4 = findViewById(R.id.btnAct4);
         Act4.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), SaludosActivity.class)));
 
-        Juego1 = findViewById(R.id.btnJuego1);
-        Juego1.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), RelationWordsActivity.class)));
+        game = findViewById(R.id.gameScreen);
+        game.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), GameScreenActivity.class)));
     }
 }
