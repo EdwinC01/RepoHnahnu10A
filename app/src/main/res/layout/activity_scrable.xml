@@ -1,39 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activityScrable">
-
-
-
+    android:padding="16dp">
 
     <TextView
-        android:id="@+id/textViewH"
+        android:id="@+id/textViewPalabra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="H"
+        android:layout_marginBottom="32dp"
         android:textSize="24sp"
-        android:textColor="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="16dp"/>
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnNuevaPalabra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nueva Palabra"
+        android:layout_below="@id/textViewPalabra"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
 
     <TextView
-        android:id="@+id/textViewO"
+        android:id="@+id/textViewPalabraOrdenada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="O"
-        android:textSize="24sp"
-        android:textColor="#000000"
-        app:layout_constraintStart_toEndOf="@+id/textViewH"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="16dp"/>
+        android:textSize="50sp"
+        android:textStyle="italic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        />
+
+    <EditText
+        android:id="@+id/textViewResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnNuevaPalabra"
+        android:layout_marginTop="32dp"
+        android:hint="dsfdsf"
+        android:textSize="50sp"
+        android:inputType="none"
+        />
+
+    <GridLayout
+        android:id="@+id/gridLayoutLetras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewResultado"
+
+        android:layout_marginTop="16dp"/>
+    <LinearLayout
+        android:id="@+id/layoutLetras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/textViewResultado"
+        android:layout_marginTop="16dp"/>
+
+
+    <Button
+        android:id="@+id/btnVerificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verificar"
+        android:layout_below="@id/gridLayoutLetras"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
 
 
 
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

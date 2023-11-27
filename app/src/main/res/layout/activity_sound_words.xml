@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F2F2F2">
+
+    <Button
+        android:id="@+id/buttonPlayAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="Escuchar de Nuevo"
+        android:background="#FF5722"
+        android:textColor="#FFFFFF"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp" />
+
+    <Button
+        android:id="@+id/buttonPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/buttonPlayAgain"
+        android:layout_centerVertical="true"
+        android:text="Reproducir Sonido"
+        android:background="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp" />
+
+    <!-- Tus TextViews y LinearLayout -->
+    <TextView
+        android:id="@+id/textViewSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonPlay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Sonido Actual: "
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textViewAttempts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewSound"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Intentos restantes: 3" />
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewAttempts"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonOption1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="K'angi"
+            android:layout_marginRight="8dp"
+            android:background="#80D8FF" />
+
+        <Button
+            android:id="@+id/buttonOption2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="B'ospi"
+            android:layout_marginRight="8dp"
+            android:background="#80D8FF" />
+
+        <Button
+            android:id="@+id/buttonOption3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nanxa"
+            android:background="#80D8FF" />
+
+    </LinearLayout>
+</RelativeLayout>
