@@ -21,7 +21,8 @@
             android:layout_toEndOf="@id/left_icon"
             android:text="EL ALFABETO HÑÄHÑU | RA HMUNTS'A NSIHNI HÑÄHÑU"
             android:textColor="@color/white"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:fontFamily="@font/okashi_regular"/>
     </RelativeLayout>
 
 </RelativeLayout>

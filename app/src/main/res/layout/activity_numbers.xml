@@ -4,32 +4,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/coral"
     android:orientation="vertical"
     tools:context=".NumbersActivity">
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_view"/>
+
     <include layout="@layout/toolbar_numbers" />
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/gridnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/okashi_regular"
+                    android:text="APRENDE\nHÑÄHÑU\nJUGANDO"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/girl__" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/top_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Presiona los botones para escuchar la pronunciación"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_below="@id/gridnumber"/>
+
+        <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/top_text"
         android:orientation="vertical">
 
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/top_text"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp">
+                android:layout_below="@id/top_text">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="15dp"
                     android:layout_row="0"
-                    android:layout_gravity="fill"
-                    android:layout_margin="6dp"
+                    android:layout_gravity="center"
                     android:layout_column="0"
                     app:cardElevation="12dp">
 
@@ -41,11 +99,13 @@
 
                         <ImageButton
                             android:id="@+id/uno"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="128dp"
+                            android:layout_height="128dp"
+                            android:layout_margin="6dp"
                             android:src="@drawable/uno"
                             android:background="#fff"
-                            android:layout_gravity="center_horizontal" />
+                            android:layout_gravity="center"
+                            android:gravity="center"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -53,7 +113,8 @@
                             android:text="Uno | n'a"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/okashi_regular" />
 
                     </LinearLayout>
 
@@ -64,8 +125,7 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="15dp"
                     android:layout_row="0"
-                    android:layout_gravity="fill"
-                    android:layout_margin="6dp"
+                    android:layout_gravity="center"
                     android:layout_column="1"
                     app:cardElevation="12dp">
 
@@ -77,11 +137,12 @@
 
                         <ImageButton
                             android:id="@+id/dos"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="128dp"
+                            android:layout_height="128dp"
+                            android:layout_margin="6dp"
                             android:src="@drawable/dos"
                             android:background="#fff"
-                            android:layout_gravity="center_horizontal" />
+                            android:layout_gravity="center" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -89,7 +150,8 @@
                             android:text="Dos | yoho"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:textColor="@color/black" />
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/okashi_regular" />
 
                     </LinearLayout>
 
@@ -100,7 +162,7 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="15dp"
                     android:layout_row="1"
-                    android:layout_gravity="fill"
+                    android:layout_gravity="center"
                     android:layout_margin="6dp"
                     android:layout_column="0"
                     app:cardElevation="12dp">
@@ -108,25 +170,26 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:gravity="center">
 
                         <ImageButton
                             android:id="@+id/tres"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_width="128dp"
+                            android:layout_height="128dp"
+                            android:layout_margin="6dp"
+                            android:src="@drawable/tres"
                             android:background="#fff"
-                            android:src="@drawable/tres"/>
+                            android:layout_gravity="center" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="top | center"
                             android:text="Tres | hñu"
-                            android:textColor="#000"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:gravity="center" />
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/okashi_regular" />
 
                     </LinearLayout>
 
@@ -137,35 +200,36 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="15dp"
                     android:layout_row="1"
-                    android:layout_gravity="fill"
+                    android:layout_gravity="center"
                     android:layout_margin="6dp"
                     android:layout_column="1"
                     app:cardElevation="12dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
 
-                    <ImageButton
-                        android:id="@+id/cuatro"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:src="@drawable/four"
-                        android:background="#fff"/>
+                        <ImageButton
+                            android:id="@+id/cuatro"
+                            android:layout_width="128dp"
+                            android:layout_height="128dp"
+                            android:layout_margin="6dp"
+                            android:src="@drawable/cuatro"
+                            android:background="#fff"
+                            android:layout_gravity="center" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top | center"
-                        android:text="Cuatro | goho"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:textSize="18sp"
-                        android:gravity="center" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cuatro | goho"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/okashi_regular" />
 
-                </LinearLayout>
+                    </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
@@ -174,7 +238,7 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="15dp"
                     android:layout_row="2"
-                    android:layout_gravity="fill"
+                    android:layout_gravity="center"
                     android:layout_margin="6dp"
                     android:layout_column="0"
                     app:cardElevation="12dp">
@@ -186,8 +250,9 @@
 
                         <ImageButton
                             android:id="@+id/cinco"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="128dp"
+                            android:layout_height="128dp"
+                            android:layout_margin="6dp"
                             android:layout_gravity="center"
                             android:src="@drawable/cinco"
                             android:background="#fff"/>
@@ -200,7 +265,8 @@
                             android:textColor="@color/black"
                             android:textStyle="bold"
                             android:textSize="18sp"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:fontFamily="@font/okashi_regular" />
 
                     </LinearLayout>
 
@@ -211,7 +277,7 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="15dp"
                     android:layout_row="2"
-                    android:layout_gravity="fill"
+                    android:layout_gravity="center"
                     android:layout_margin="6dp"
                     android:layout_column="1"
                     app:cardElevation="12dp">
@@ -223,8 +289,9 @@
 
                         <ImageButton
                             android:id="@+id/seis"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="128dp"
+                            android:layout_height="128dp"
+                            android:layout_margin="6dp"
                             android:layout_gravity="center"
                             android:src="@drawable/seis"
                             android:background="#fff"/>
@@ -237,7 +304,8 @@
                             android:textColor="@color/black"
                             android:textStyle="bold"
                             android:textSize="18sp"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:fontFamily="@font/okashi_regular" />
 
                     </LinearLayout>
 
@@ -248,7 +316,7 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="15dp"
                     android:layout_row="3"
-                    android:layout_gravity="fill"
+                    android:layout_gravity="center"
                     android:layout_margin="6dp"
                     android:layout_column="0"
                     app:cardElevation="12dp">
@@ -260,8 +328,9 @@
 
                         <ImageButton
                             android:id="@+id/siete"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="128dp"
+                            android:layout_height="128dp"
+                            android:layout_margin="6dp"
                             android:layout_gravity="center"
                             android:src="@drawable/siete"
                             android:background="#fff"/>
@@ -274,7 +343,8 @@
                             android:textColor="@color/black"
                             android:textStyle="bold"
                             android:textSize="18sp"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:fontFamily="@font/okashi_regular" />
 
                     </LinearLayout>
 
@@ -285,7 +355,7 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="15dp"
                     android:layout_row="3"
-                    android:layout_gravity="fill"
+                    android:layout_gravity="center"
                     android:layout_margin="6dp"
                     android:layout_column="1"
                     app:cardElevation="12dp">
@@ -297,8 +367,9 @@
 
                         <ImageButton
                             android:id="@+id/ocho"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="128dp"
+                            android:layout_height="128dp"
+                            android:layout_margin="6dp"
                             android:layout_gravity="center"
                             android:src="@drawable/ocho"
                             android:background="#fff"/>
@@ -311,7 +382,8 @@
                             android:textColor="@color/black"
                             android:textStyle="bold"
                             android:textSize="18sp"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:fontFamily="@font/okashi_regular" />
 
                     </LinearLayout>
 
@@ -322,7 +394,7 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="15dp"
                     android:layout_row="4"
-                    android:layout_gravity="fill"
+                    android:layout_gravity="center"
                     android:layout_margin="6dp"
                     android:layout_column="0"
                     app:cardElevation="12dp">
@@ -334,8 +406,9 @@
 
                         <ImageButton
                             android:id="@+id/nueve"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="128dp"
+                            android:layout_height="128dp"
+                            android:layout_margin="6dp"
                             android:layout_gravity="center"
                             android:src="@drawable/nueve"
                             android:background="#fff"/>
@@ -343,12 +416,13 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="top | center"
+                            android:layout_gravity="center"
                             android:text="Nueve | gu̲to"
                             android:textColor="@color/black"
                             android:textStyle="bold"
                             android:textSize="18sp"
-                            android:gravity="center" />
+                            android:gravity="center"
+                            android:fontFamily="@font/okashi_regular" />
 
                     </LinearLayout>
 
@@ -358,16 +432,8 @@
 
     </ScrollView>
 
-    <TextView
-        android:id="@+id/top_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:text="Presiona los botones para escuchar la pronunciación"
-        android:textColor="#000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        android:gravity="center"/>
+    </LinearLayout>
+
+
 
 </RelativeLayout>

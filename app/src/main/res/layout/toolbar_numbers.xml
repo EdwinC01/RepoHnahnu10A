@@ -21,8 +21,8 @@
             android:layout_toEndOf="@id/left_icon"
             android:text="Números"
             android:textColor="@color/white"
-            android:textSize="14sp"
-            android:fontFamily="@font/alloy_ink"/>
+            android:textSize="18sp"
+            android:fontFamily="@font/okashi_regular"/>
     </RelativeLayout>
 
 </RelativeLayout>
