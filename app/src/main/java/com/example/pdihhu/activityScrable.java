@@ -1,5 +1,6 @@
 package com.example.pdihhu;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,7 +33,6 @@ public class activityScrable extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scrable);
-        this.setTitle(Title);
 
 
 
@@ -61,6 +61,19 @@ public class activityScrable extends AppCompatActivity {
         palabras.add("TEXTO");
         palabras.add("TORRES");
         palabras.add("T'AXI");
+        palabras.add("YOHO");
+        palabras.add("GOHO");
+        palabras.add("HÑU");
+        palabras.add("N'A");
+        palabras.add("R'ATO");
+        palabras.add("YOTO");
+        palabras.add("NONXI");
+        palabras.add("MARTE");
+        palabras.add("MIERKOLE");
+        palabras.add("NSABDO");
+        palabras.add("MBEHE");
+        palabras.add("NJUEBE");
+        palabras.add("NDOMINGO");
 
         btnNuevaPalabra.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,7 +116,6 @@ public class activityScrable extends AppCompatActivity {
         palabraActual = palabras.get(rand.nextInt(palabras.size())); // Selecciona una palabra aleatoria
 
         // Muestra las letras desordenadas de la palabra como pista en el EditText
-        textViewResultado.setHint(desordenarLetras(palabraActual));
 
         // Muestra la palabra ordenada en el TextView textViewPalabraOrdenada
         TextView textViewPalabraOrdenada = findViewById(R.id.textViewPalabraOrdenada);

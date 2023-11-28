@@ -19,9 +19,9 @@
             android:layout_marginStart="16dp"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@id/left_icon"
-            android:text="COLORES | Yä thuhu yä kuhu"
+            android:text="Escucha y selecciona"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:fontFamily="@font/okashi_regular"/>
     </RelativeLayout>
 

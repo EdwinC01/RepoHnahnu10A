@@ -2,11 +2,71 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".memoramaActivity">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/bg_view" />
 
+    <include layout="@layout/toolbar_memo" />
+
+    <LinearLayout
+        android:id="@+id/card_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            app:cardCornerRadius="15dp"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center | top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/okashi_regular"
+                    android:text="APRENDE\nHÑÄHÑU\nJUGANDO"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/girl__" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/top_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Busca la pareja de cada color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="15dp" />
+
+    </LinearLayout>
 
 
     <TextView
@@ -15,7 +75,8 @@
         android:layout_height="wrap_content"
         android:text="Intentos restantes: 5"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/card_color"/>
 
 
 
@@ -31,14 +92,17 @@
             android:id="@+id/gridLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:columnCount="4"
             android:rowCount="5"
             android:padding="16dp"
             android:layout_margin="8dp">
+
             <ImageButton
                 android:id="@+id/button1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_ama" />
@@ -47,6 +111,7 @@
                 android:id="@+id/button2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_rojo" />
@@ -55,6 +120,7 @@
                 android:id="@+id/button3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_rojo" />
@@ -62,6 +128,7 @@
                 android:id="@+id/button4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_ama" />
@@ -69,6 +136,7 @@
                 android:id="@+id/button5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_rosa"/>
@@ -76,6 +144,7 @@
                 android:id="@+id/button6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_nar"/>
@@ -83,6 +152,7 @@
                 android:id="@+id/button7"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_neg"/>
@@ -90,6 +160,7 @@
                 android:id="@+id/button8"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_azul"/>
@@ -97,6 +168,7 @@
                 android:id="@+id/button9"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_azul"/>
@@ -104,6 +176,7 @@
                 android:id="@+id/button10"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_bla"/>
@@ -111,6 +184,7 @@
                 android:id="@+id/button11"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_cafe"/>
@@ -118,6 +192,7 @@
                 android:id="@+id/button12"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_neg"/>
@@ -125,6 +200,7 @@
                 android:id="@+id/button13"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_bla"/>
@@ -132,6 +208,7 @@
                 android:id="@+id/button14"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_gris"/>
@@ -139,6 +216,7 @@
                 android:id="@+id/button15"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_nar"/>
@@ -146,6 +224,7 @@
                 android:id="@+id/button16"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_rosa"/>
@@ -153,6 +232,7 @@
                 android:id="@+id/button17"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_cafe"/>
@@ -160,6 +240,7 @@
                 android:id="@+id/button18"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_ver"/>
@@ -167,6 +248,7 @@
                 android:id="@+id/button19"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_ver"/>
@@ -174,6 +256,7 @@
                 android:id="@+id/button20"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:src="@drawable/cir_gris"/>

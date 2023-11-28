@@ -1,86 +1,161 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#F2F2F2">
+    android:background="@color/coral">
 
-    <Button
-        android:id="@+id/buttonPlayAgain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_centerVertical="true"
-        android:text="Escuchar de Nuevo"
-        android:background="#FF5722"
-        android:textColor="#FFFFFF"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_view" />
 
-    <Button
-        android:id="@+id/buttonPlay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/buttonPlayAgain"
-        android:layout_centerVertical="true"
-        android:text="Reproducir Sonido"
-        android:background="#4CAF50"
-        android:textColor="#FFFFFF"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp" />
-
-    <!-- Tus TextViews y LinearLayout -->
-    <TextView
-        android:id="@+id/textViewSound"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonPlay"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Sonido Actual: "
-        android:visibility="gone"/>
-
-    <TextView
-        android:id="@+id/textViewAttempts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewSound"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Intentos restantes: 3" />
+    <include layout="@layout/toolbar_sounds" />
 
     <LinearLayout
-        android:id="@+id/buttonsLayout"
+        android:id="@+id/card_color"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textViewAttempts"
+        android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:cardCornerRadius="15dp"
+        android:layout_gravity="center"
+        android:layout_below="@id/top_text">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center | top">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/okashi_regular"
+                android:text="APRENDE\nHÑÄHÑU\nJUGANDO"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/kid" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/top_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Escucha el sonido y elige la \nrespuesta correcta"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="15dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layPlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/card_color"
         android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/buttonOption1"
+            android:id="@+id/buttonPlayAgain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="K'angi"
-            android:layout_marginRight="8dp"
-            android:background="#80D8FF" />
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="Escuchar de Nuevo"
+            android:background="#FF5722"
+            android:textColor="#FFFFFF"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_below="@id/card_color"/>
 
         <Button
-            android:id="@+id/buttonOption2"
+            android:id="@+id/buttonPlay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="B'ospi"
-            android:layout_marginRight="8dp"
-            android:background="#80D8FF" />
-
-        <Button
-            android:id="@+id/buttonOption3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Nanxa"
-            android:background="#80D8FF" />
+            android:layout_toEndOf="@id/buttonPlayAgain"
+            android:layout_centerVertical="true"
+            android:text="Reproducir Sonido"
+            android:background="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp" />
 
     </LinearLayout>
+
+        <!-- Tus TextViews y LinearLayout -->
+        <TextView
+            android:id="@+id/textViewSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layPlay"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Sonido Actual: "
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/textViewAttempts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewSound"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Intentos restantes: 3" />
+
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewAttempts"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonOption1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="K'angi"
+                android:layout_marginRight="8dp"
+                android:background="#80D8FF" />
+
+            <Button
+                android:id="@+id/buttonOption2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="B'ospi"
+                android:layout_marginRight="8dp"
+                android:background="#80D8FF" />
+
+            <Button
+                android:id="@+id/buttonOption3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Nanxa"
+                android:background="#80D8FF" />
+
+        </LinearLayout>
+
 </RelativeLayout>
