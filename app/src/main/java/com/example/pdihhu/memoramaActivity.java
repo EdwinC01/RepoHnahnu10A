@@ -57,6 +57,7 @@ public class memoramaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memorama);
+        mostrarAlertaIniciarActividad();
 
         mapaAudios.put(R.drawable.cir_ama, R.raw.amarillo);
         mapaAudios.put(R.drawable.cir_rojo, R.raw.rojo);
@@ -304,5 +305,19 @@ public class memoramaActivity extends AppCompatActivity {
                 cartaMostrada = null;
             }
         }, 500); // Tiempo de espera para la animación en milisegundos
+    }
+
+    // Función para mostrar la alerta al iniciar la actividad
+    private void mostrarAlertaIniciarActividad() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("¡Memorama!")
+                .setMessage("¡Tienes 5 intentos para encontrar las parejas de cada tarjeta!")
+                .setPositiveButton("Continuar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Aquí puedes agregar lógica adicional después de hacer clic en OK
+                    }
+                })
+
+                .show();
     }
 }

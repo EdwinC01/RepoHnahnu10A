@@ -34,6 +34,8 @@ public class activityScrable extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scrable);
 
+        mostrarAlertaIniciarActividad();
+
 
 
 
@@ -69,6 +71,17 @@ public class activityScrable extends AppCompatActivity {
         palabras.add("MBEHE");
         palabras.add("NJUEBE");
         palabras.add("NDOMINGO");
+        palabras.add("K'ASTI");
+        palabras.add("IXKI");
+        palabras.add("NANXA");
+        palabras.add("MBO'I");
+        palabras.add("K'ANGI");
+        palabras.add("THENI");
+        palabras.add("T'AXI");
+        palabras.add("B'OSPI");
+        palabras.add("NOXA");
+        palabras.add("B'OTHE");
+
 
         btnNuevaPalabra.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -193,6 +206,21 @@ public class activityScrable extends AppCompatActivity {
                 })
                 .show();
     }
+    // Función para mostrar la alerta al iniciar la actividad
+    private void mostrarAlertaIniciarActividad() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("¡Escribe y aprende!")
+                .setMessage("¡Escribe las palabras que aparecen arriba y aprende a escribirlas correctamente!")
+                .setPositiveButton("Continuar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Aquí puedes agregar lógica adicional después de hacer clic en OK
+                    }
+                })
+
+                .show();
+    }
+
+
 
 
 }

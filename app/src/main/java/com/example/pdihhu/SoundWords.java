@@ -285,17 +285,12 @@ public class SoundWords extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("¡Escucha y selecciona !")
                 .setMessage("Reproduce los sonidos y selecciona la palabra correcta")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Continuar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // Aquí puedes agregar lógica adicional después de hacer clic en OK
                     }
                 })
-                .setNegativeButton("Salir", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Cerrar la actividad si el usuario hace clic en "Salir"
-                        finish();
-                    }
-                })
+
                 .show();
     }
 }
