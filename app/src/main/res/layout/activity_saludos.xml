@@ -106,9 +106,9 @@
                             android:id="@+id/lunes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/semana"
+                            android:layout_gravity="center_horizontal"
                             android:background="#fff"
-                            android:layout_gravity="center_horizontal" />
+                            android:src="@drawable/lun" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -144,7 +144,7 @@
                             android:id="@+id/martes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/semana"
+                            android:src="@drawable/mie"
                             android:background="#fff"
                             android:layout_gravity="center_horizontal" />
 
@@ -182,7 +182,7 @@
                             android:id="@+id/miercoles"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/semana"
+                            android:src="@drawable/mie"
                             android:background="#fff"
                             android:layout_gravity="center_horizontal" />
 
@@ -220,7 +220,7 @@
                             android:id="@+id/jueves"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/semana"
+                            android:src="@drawable/jue"
                             android:background="#fff"
                             android:layout_gravity="center_horizontal" />
 
@@ -258,7 +258,7 @@
                             android:id="@+id/viernes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/semana"
+                            android:src="@drawable/vie"
                             android:background="#fff"
                             android:layout_gravity="center_horizontal" />
 
@@ -296,7 +296,7 @@
                             android:id="@+id/sabado"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/semana"
+                            android:src="@drawable/sab"
                             android:background="#fff"
                             android:layout_gravity="center_horizontal" />
 
@@ -334,7 +334,7 @@
                             android:id="@+id/domingo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/semana"
+                            android:src="@drawable/dom"
                             android:background="#fff"
                             android:layout_gravity="center_horizontal" />
 

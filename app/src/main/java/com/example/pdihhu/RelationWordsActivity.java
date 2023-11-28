@@ -229,10 +229,10 @@ public class RelationWordsActivity extends AppCompatActivity {
     }
 
     private void resetColors() {
-        int lighterGrayColor = Color.rgb(210, 210,210);
+        int white = Color.rgb(255, 255,255);
 
         for (Button button : buttons) {
-            button.setBackgroundColor(lighterGrayColor);
+            button.setBackgroundColor(white);
         }
 
         for (int i = 0; i < isButtonClicked.length; i++) {
