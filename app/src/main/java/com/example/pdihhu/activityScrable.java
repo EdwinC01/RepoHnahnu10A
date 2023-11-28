@@ -52,14 +52,9 @@ public class activityScrable extends AppCompatActivity {
             }
         });
 
-        palabras.add("CASA");
-        palabras.add("PERRO");
-        palabras.add("MESA");
-        palabras.add("LIBRO");
-        palabras.add("CARRO");
-        palabras.add("PINTURA");
-        palabras.add("TEXTO");
-        palabras.add("TORRES");
+
+
+
         palabras.add("T'AXI");
         palabras.add("YOHO");
         palabras.add("GOHO");

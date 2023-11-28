@@ -43,6 +43,7 @@ public class SoundWords extends AppCompatActivity {
         setContentView(R.layout.activity_sound_words);
 
         // ... (inicializaciones de botones y vistas)
+        mostrarAlertaIniciarActividad();
 
         soundColorMap = new HashMap<>();
         soundColorMap.put("azul", "#87CEEB"); // Colores según los sonidos
@@ -279,5 +280,22 @@ public class SoundWords extends AppCompatActivity {
             mediaPlayer.release();
             mediaPlayer = null;
         }
+    }    // Función para mostrar la alerta al iniciar la actividad
+    private void mostrarAlertaIniciarActividad() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("¡Escucha y selecciona !")
+                .setMessage("Reproduce los sonidos y selecciona la palabra correcta")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Aquí puedes agregar lógica adicional después de hacer clic en OK
+                    }
+                })
+                .setNegativeButton("Salir", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Cerrar la actividad si el usuario hace clic en "Salir"
+                        finish();
+                    }
+                })
+                .show();
     }
 }
