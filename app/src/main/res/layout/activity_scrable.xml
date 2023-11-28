@@ -4,69 +4,77 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textViewPalabra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
     <Button
         android:id="@+id/btnNuevaPalabra"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:text="Nueva Palabra"
-        android:layout_below="@id/textViewPalabra"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp" />
-
-    <TextView
-        android:id="@+id/textViewPalabraOrdenada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:textStyle="italic"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        />
-
-    <EditText
-        android:id="@+id/textViewResultado"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnNuevaPalabra"
         android:layout_marginTop="32dp"
-        android:hint="dsfdsf"
-        android:textSize="50sp"
-        android:inputType="none"
-        />
+        android:background="@drawable/button_background_primary"
+        android:text="Nueva Palabra" />
 
-    <GridLayout
-        android:id="@+id/gridLayoutLetras"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewResultado"
-
-        android:layout_marginTop="16dp"/>
     <LinearLayout
-        android:id="@+id/layoutLetras"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/textViewResultado"
-        android:layout_marginTop="16dp"/>
+        android:orientation="vertical"
+        android:layout_below="@id/btnNuevaPalabra"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:id="@+id/textViewPalabra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/textViewPalabraOrdenada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            android:textStyle="italic"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp" />
+
+        <EditText
+            android:id="@+id/textViewResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:hint=""
+            android:inputType="none"
+            android:textSize="36sp" />
+
+        <GridLayout
+            android:id="@+id/gridLayoutLetras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutLetras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp" />
+        android:weightSum="2">
 
 
-    <Button
-        android:id="@+id/btnVerificar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Verificar"
-        android:layout_below="@id/gridLayoutLetras"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        <Button
+            android:id="@+id/btnBorrarLetra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/colorrojo"
+            android:text="Borrar letra" />
 
-
-
+        <Button
+            android:id="@+id/btnVerificar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/colorverde"
+            android:text="Verificar" />
+    </LinearLayout>
 </RelativeLayout>
