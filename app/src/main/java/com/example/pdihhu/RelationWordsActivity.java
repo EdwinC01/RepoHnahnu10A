@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.view.View;
 import android.view.animation.CycleInterpolator;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -22,6 +23,8 @@ import android.content.DialogInterface;
 
 public class RelationWordsActivity extends AppCompatActivity {
     String Title = "Relacion de palabras";
+
+    private ImageButton atras;
 
     private List<Button> buttons = new ArrayList<>();
     private List<Button> selectedButtons = new ArrayList<>();
@@ -58,6 +61,15 @@ public class RelationWordsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_relation_words);
         this.setTitle(Title);
+
+
+        atras = findViewById(R.id.left_icon);
+        atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
         buttons.add((Button) findViewById(R.id.roj));

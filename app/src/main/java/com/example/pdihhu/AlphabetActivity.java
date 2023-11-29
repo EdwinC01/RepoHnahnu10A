@@ -3,10 +3,12 @@ package com.example.pdihhu;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class AlphabetActivity extends AppCompatActivity implements View.OnClickListener {
     String Title = "EL ALFABETO HÑÄHÑU | RA HMUNTS'A NSIHNI HÑÄHÑU";
@@ -14,11 +16,20 @@ public class AlphabetActivity extends AppCompatActivity implements View.OnClickL
     // Variables
     private Button Aa, Aa_, Bb, Dd, Ee, Ee_, Ff, Gg, Hh, Ii, Jj, Kk, Ll, Mm, Nn, Nn_, Oo, Oo_, Pp, Rr, Ss, Tt, Uu, Uu_, Xx, Yy, Zz, Juego2;
     private MediaPlayer mediaPlayer;
+    private ImageButton atras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_alphabet);
+
+        atras = findViewById(R.id.left_icon);
+        atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         // Mostrar el título
         this.setTitle(Title);

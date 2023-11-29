@@ -11,13 +11,21 @@ public class SaludosActivity extends AppCompatActivity implements View.OnClickLi
 
     String Title = "DÍAS DE LA SEMANA | Yä thuhu yä yoto mapá";
 
-    private ImageButton lun, mar, mie, jue, vie, sab, dom;
+    private ImageButton lun, mar, mie, jue, vie, sab, dom, atras;
     private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saludos);
+
+        atras = findViewById(R.id.left_icon);
+        atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         setTitle(Title);
 

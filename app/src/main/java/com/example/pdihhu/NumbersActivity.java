@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class NumbersActivity extends AppCompatActivity implements View.OnClickListener {
-    private ImageButton uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve;
+    private ImageButton uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, atras;
     private MediaPlayer mediaPlayer;
 
     String Title = "Números";
@@ -19,6 +19,14 @@ public class NumbersActivity extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
+
+        atras = findViewById(R.id.left_icon);
+        atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         this.setTitle(Title);
 

@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.Random;
@@ -36,11 +37,21 @@ public class SoundWords extends AppCompatActivity {
     private Handler handler = new Handler();
     private int correctAnswersCount = 0;
 
+    private ImageButton atras;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sound_words);
+
+        atras = findViewById(R.id.left_icon);
+        atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         // ... (inicializaciones de botones y vistas)
         mostrarAlertaIniciarActividad();

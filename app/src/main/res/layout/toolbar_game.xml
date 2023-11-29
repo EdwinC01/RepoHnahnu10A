@@ -8,10 +8,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
-        <ImageView
+        <ImageButton
             android:id="@+id/left_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#7C3030"
             android:layout_centerVertical="true"
             android:src="@drawable/ic_baseline_arrow_back_24"/>
         <TextView
@@ -20,11 +21,11 @@
             android:layout_marginStart="16dp"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@id/left_icon"
-            android:text="Juegos"
+            android:text="JUEGOS"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            android:fontFamily="@font/alloy_ink"/>
+            android:fontFamily="@font/okashi_regular"/>
     </RelativeLayout>
 
 </RelativeLayout>

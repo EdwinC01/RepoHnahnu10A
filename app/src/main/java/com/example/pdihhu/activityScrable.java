@@ -16,6 +16,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import android.widget.GridLayout;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.content.DialogInterface;
 import android.widget.TextView;
@@ -27,7 +28,8 @@ public class activityScrable extends AppCompatActivity {
     private String palabraActual;
     private EditText textViewResultado;
     private LinearLayout layoutLetras;
-    private Button JuegoSound;
+    private Button borrarUltimaLetra;
+    private ImageButton atras;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,14 @@ public class activityScrable extends AppCompatActivity {
         textViewResultado = findViewById(R.id.textViewResultado);
         Button btnNuevaPalabra = findViewById(R.id.btnNuevaPalabra);
         Button btnVerificar = findViewById(R.id.btnVerificar);
+        Button btnBorrarLetra = findViewById(R.id.btnBorrarLetra);
+        ImageButton atras = findViewById(R.id.left_icon);
+        atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
 
@@ -51,6 +61,13 @@ public class activityScrable extends AppCompatActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 ocultarTeclado(); // Llamar al método para ocultar el teclado
                 return true;
+            }
+        });
+
+        btnBorrarLetra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                borrarUltimaLetra();
             }
         });
 
@@ -219,6 +236,17 @@ public class activityScrable extends AppCompatActivity {
 
                 .show();
     }
+
+    private void borrarUltimaLetra() {
+        String textoActual = textViewResultado.getText().toString();
+        if (!textoActual.isEmpty()) {
+            String nuevoTexto = textoActual.substring(0, textoActual.length() - 1);
+            textViewResultado.setText(nuevoTexto);
+        }
+    }
+
+
+
 
 
 

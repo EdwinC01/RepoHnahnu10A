@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.ObjectAnimator;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Handler;
@@ -21,6 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class memoramaActivity extends AppCompatActivity {
+    private ImageButton atras;
     // Declara un objeto MediaPlayer y un HashMap para mapear los recursos de imagen con los recursos de audio
     private MediaPlayer mediaPlayer;
     private HashMap<Integer, Integer> mapaAudios = new HashMap<>();
@@ -57,6 +59,16 @@ public class memoramaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memorama);
+
+        atras = findViewById(R.id.left_icon);
+        atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
         mostrarAlertaIniciarActividad();
 
         mapaAudios.put(R.drawable.cir_ama, R.raw.amarillo);

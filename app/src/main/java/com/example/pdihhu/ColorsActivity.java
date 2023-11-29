@@ -15,13 +15,21 @@ import android.widget.Toolbar;
 public class ColorsActivity extends AppCompatActivity implements View.OnClickListener {
     String Title = "COLORES | Yä thuhu yä kuhu";
 
-    ImageButton imgBtnYellow, imgBtnOrange, imgBtnBlue, imgBtnWhite, imgBtnGray, imgBtnBlack, imgBtnRed, imgBtnGreen, imgBtnPink;
+    ImageButton imgBtnYellow, imgBtnOrange, imgBtnBlue, imgBtnWhite, imgBtnGray, imgBtnBlack, imgBtnRed, imgBtnGreen, imgBtnPink, atras;
     private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_colors);
+
+        atras = findViewById(R.id.left_icon);
+        atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         mediaPlayer = new MediaPlayer();
 

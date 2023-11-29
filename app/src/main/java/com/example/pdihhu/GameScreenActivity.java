@@ -4,11 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 
 public class GameScreenActivity extends AppCompatActivity {
 
-    ImageButton imgGame1, imgGame2, imgGame3, imgGame4 ;
+    ImageButton imgGame1, imgGame2, imgGame3, imgGame4, atras;
 
 
 
@@ -16,6 +17,15 @@ public class GameScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_screen);
+
+        atras = findViewById(R.id.left_icon);
+        atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+
+            }
+        });
 
         imgGame1 = findViewById(R.id.imgGame1);
         imgGame2 = findViewById(R.id.imgGame2);
