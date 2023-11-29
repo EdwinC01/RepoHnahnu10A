@@ -87,6 +87,7 @@
                             android:id="@+id/imgGame1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_margin="6dp"
                             android:src="@drawable/colorboard"
                             android:background="@color/white"/>
 
@@ -175,7 +176,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="8dp"
                             android:fontFamily="@font/okashi_regular"
-                            android:text="Memorama"
+                            android:text="Juego de memoria"
                             android:textColor="@color/black"
                             android:textSize="24sp"
                             android:textStyle="bold"
@@ -206,7 +207,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="6dp"
-                            android:src="@drawable/memoria"
+                            android:src="@drawable/ordenar"
                             android:background="@color/white"/>
 
                         <TextView

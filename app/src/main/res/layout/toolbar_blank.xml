@@ -18,6 +18,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:text="Relaciona las palabras"
+            android:textColor="@color/white"
+            android:fontFamily="@font/okashi_regular"
+            android:textSize="18dp"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@id/left_icon" />
     </RelativeLayout>

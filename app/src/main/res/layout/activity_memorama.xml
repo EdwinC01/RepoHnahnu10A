@@ -23,7 +23,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="90dp"
             app:cardCornerRadius="15dp"
             android:layout_gravity="center">
 
@@ -36,8 +36,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
                     android:fontFamily="@font/okashi_regular"
-                    android:text="APRENDE\nHÑÄHÑU\nJUGANDO"
+                    android:text="BUSCA\nLAS\nPAREJAS"
                     android:textColor="@color/black"
                     android:textSize="24sp"
                     android:textStyle="bold"
@@ -58,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Busca la pareja de cada color"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:fontFamily="@font/okashi_regular"
@@ -74,6 +75,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Intentos restantes: 5"
+        android:fontFamily="@font/okashi_regular"
+        android:textColor="@color/black"
+        android:textSize="16dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:layout_below="@id/card_color"/>

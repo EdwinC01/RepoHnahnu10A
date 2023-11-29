@@ -40,8 +40,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
                     android:fontFamily="@font/okashi_regular"
-                    android:text="APRENDE\nHÑÄHÑU\nJUGANDO"
+                    android:text="RELACIONA\nLAS\nPALABRAS"
                     android:textColor="@color/black"
                     android:textSize="24sp"
                     android:textStyle="bold"
@@ -70,11 +71,22 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:text="Relaciona la palabra con su \nsignificado"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:fontFamily="@font/okashi_regular"
+                android:textColor="@color/black" />
+
         <TextView
             android:id="@+id/attemptsTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
+            android:layout_margin="24dp"
             android:text="Intentos restantes: 3"
             android:layout_gravity="center"
             android:textSize="24sp"

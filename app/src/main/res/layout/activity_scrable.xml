@@ -1,32 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@color/coral">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_view" />
+
+    <include layout="@layout/toolbar_scrable" />
+
+    <LinearLayout
+        android:id="@+id/card_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            app:cardCornerRadius="15dp"
+            android:layout_gravity="center"
+            android:layout_below="@id/top_text">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center | top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/okashi_regular"
+                    android:text="APRENDE\nHÑÄHÑU\nJUGANDO"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/girl" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/top_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Escribe las palabras como se muestra \nen el texto"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="15dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_below="@id/card_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/card_color">
 
     <Button
         android:id="@+id/btnNuevaPalabra"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:layout_marginTop="32dp"
         android:background="@drawable/button_background_primary"
-        android:text="Nueva Palabra" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_below="@id/btnNuevaPalabra"
-        android:layout_marginTop="24dp">
-
-        <TextView
-            android:id="@+id/textViewPalabra"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal" />
+        android:text="Nueva Palabra"
+        android:fontFamily="@font/okashi_regular"/>
 
         <TextView
             android:id="@+id/textViewPalabraOrdenada"
@@ -37,6 +99,26 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="24dp" />
 
+        <TextView
+            android:id="@+id/textViewPalabra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <GridLayout
+            android:id="@+id/gridLayoutLetras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" />
+        <LinearLayout
+            android:id="@+id/layoutLetras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"/>
+
         <EditText
             android:id="@+id/textViewResultado"
             android:layout_width="match_parent"
@@ -46,28 +128,14 @@
             android:inputType="none"
             android:textSize="36sp" />
 
-        <GridLayout
-            android:id="@+id/gridLayoutLetras"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp" />
-
-        <LinearLayout
-            android:id="@+id/layoutLetras"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="24dp" />
-        android:weightSum="2">
-
-
         <Button
             android:id="@+id/btnBorrarLetra"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:background="@drawable/colorrojo"
-            android:text="Borrar letra" />
+            android:text="Borrar letra"
+            android:fontFamily="@font/okashi_regular" />
 
         <Button
             android:id="@+id/btnVerificar"
@@ -75,6 +143,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:background="@drawable/colorverde"
-            android:text="Verificar" />
+            android:text="Verificar"
+            android:fontFamily="@font/okashi_regular" />
     </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

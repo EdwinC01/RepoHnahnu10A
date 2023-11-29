@@ -39,8 +39,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
                     android:fontFamily="@font/okashi_regular"
-                    android:text="APRENDE\nHÑÄHÑU\nJUGANDO"
+                    android:text="ESCUCHA\nY\nAPRENDE"
                     android:textColor="@color/black"
                     android:textSize="24sp"
                     android:textStyle="bold"
@@ -926,6 +927,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="Presiona los botones para escuchar la pronunciación"
+        android:fontFamily="@font/okashi_regular"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
