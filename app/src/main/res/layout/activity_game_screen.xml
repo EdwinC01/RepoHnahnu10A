@@ -92,8 +92,9 @@
                             android:background="@color/white"/>
 
                         <TextView
+                            android:id="@+id/txtGame1"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_margin="8dp"
                             android:fontFamily="@font/okashi_regular"
                             android:text="Relaciona palabras"
@@ -132,8 +133,9 @@
                             android:background="@color/white"/>
 
                         <TextView
+                            android:id="@+id/txtGame2"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_margin="8dp"
                             android:fontFamily="@font/okashi_regular"
                             android:text="Escucha y selecciona"
@@ -172,8 +174,9 @@
                             android:background="@color/white"/>
 
                         <TextView
+                            android:id="@+id/txtGame3"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_margin="8dp"
                             android:fontFamily="@font/okashi_regular"
                             android:text="Juego de memoria"
@@ -211,8 +214,9 @@
                             android:background="@color/white"/>
 
                         <TextView
+                            android:id="@+id/txtGame4"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_margin="8dp"
                             android:fontFamily="@font/okashi_regular"
                             android:text="Escribe y aprende"

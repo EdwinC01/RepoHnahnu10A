@@ -15,7 +15,7 @@ import android.widget.Toolbar;
 public class ColorsActivity extends AppCompatActivity implements View.OnClickListener {
     String Title = "COLORES | Yä thuhu yä kuhu";
 
-    ImageButton imgBtnYellow, imgBtnOrange, imgBtnBlue, imgBtnWhite, imgBtnGray, imgBtnBlack, imgBtnRed, imgBtnGreen, imgBtnPink, atras;
+    ImageButton imgBtnYellow, imgBtnOrange, imgBtnBlue, imgBtnWhite, imgBtnGray, imgBtnBlack, imgBtnRed, imgBtnGreen, imgBtnPink, imgBtnCafe, atras;
     private MediaPlayer mediaPlayer;
 
     @Override
@@ -54,8 +54,8 @@ public class ColorsActivity extends AppCompatActivity implements View.OnClickLis
         imgBtnGray = findViewById(R.id.gris);
         imgBtnGray.setOnClickListener(this::onClick);
 
-        imgBtnWhite = findViewById(R.id.blanco);
-        imgBtnWhite.setOnClickListener(this::onClick);
+        imgBtnCafe = findViewById(R.id.cafe);
+        imgBtnCafe.setOnClickListener(this::onClick);
 
         imgBtnPink = findViewById(R.id.rosa);
         imgBtnPink.setOnClickListener(this::onClick);
@@ -96,8 +96,8 @@ public class ColorsActivity extends AppCompatActivity implements View.OnClickLis
                 mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.gris);
                 mediaPlayer.start();
                 break;
-            case R.id.blanco:
-                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.frag_expl_water1);
+            case R.id.cafe:
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.cafe);
                 mediaPlayer.start();
                 break;
             case R.id.rosa:

@@ -74,7 +74,6 @@ public class memoramaActivity extends AppCompatActivity {
         mapaAudios.put(R.drawable.cir_ama, R.raw.amarillo);
         mapaAudios.put(R.drawable.cir_rojo, R.raw.rojo);
         mapaAudios.put(R.drawable.cir_azul, R.raw.azul);
-        mapaAudios.put(R.drawable.cir_bla, R.raw.azul);
         mapaAudios.put(R.drawable.cir_cafe, R.raw.cafe);
         mapaAudios.put(R.drawable.cir_gris, R.raw.gris);
         mapaAudios.put(R.drawable.cir_nar, R.raw.anaranjado);

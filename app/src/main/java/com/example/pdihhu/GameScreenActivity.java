@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class GameScreenActivity extends AppCompatActivity {
 
     ImageButton imgGame1, imgGame2, imgGame3, imgGame4, atras;
+    TextView txtGame1, txtGame2, txtGame3, txtGame4;
 
 
 
@@ -40,5 +42,16 @@ public class GameScreenActivity extends AppCompatActivity {
 
         imgGame4.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), activityScrable.class)));
 
+        txtGame1 = findViewById(R.id.txtGame1);
+        txtGame1.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), RelationWordsActivity.class)));
+
+        txtGame2 = findViewById(R.id.txtGame2);
+        txtGame2.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), SoundWords.class)));
+
+        txtGame3 = findViewById(R.id.txtGame3);
+        txtGame3.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), memoramaActivity.class)));
+
+        txtGame4 = findViewById(R.id.txtGame4);
+        txtGame4.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), activityScrable.class)));
     }
 }
