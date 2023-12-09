@@ -226,26 +226,76 @@
         android:gravity="center"
         android:layout_marginTop="105dp"/>
 
+    <LinearLayout
+        android:id="@+id/lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/top_grid"
+        android:layout_marginTop="-80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
         <ImageButton
             android:id="@+id/gameScreen"
             android:layout_width="match_parent"
             android:layout_height="30dp"
+            android:layout_weight="1"
             android:src="@drawable/ic_baseline_keyboard_arrow_up_24"
             android:background="#7C3030"
-            android:layout_marginTop="-70dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center"
             android:gravity="center"
             android:layout_below="@id/top_grid" />
 
+    <ImageButton
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_baseline_menu_24"
+        android:background="#7C3030"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_toEndOf="@id/gameScreen"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textGame"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Juegos de retroalimentación"
+            android:layout_weight="1"
+            android:text="Juegos de\nretroalimentación"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:fontFamily="@font/okashi_regular"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/gameScreen" />
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/textInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Acerca de"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

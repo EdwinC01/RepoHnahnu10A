@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoActivity">
+
+    <include layout="@layout/nav_header_main" />
+    <include layout="@layout/toolbar_info" />
+
+    <View
+        android:id="@+id/game_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bottom_game"
+        android:layout_below="@id/layContact"
+        android:layout_marginTop="-90dp" />
+
+    <ScrollView
+        android:id="@+id/layContact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EQUIPO DE DESARROLLO"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Alexa González Martínez"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/emailAle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo electrónico: alemartinex73@gmail.com"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"
+            android:autoLink="email"
+            android:clickable="true"
+            android:onClick="sendEmail"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Alicia Vianey Torres Isidro"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo electrónico: aliciacianey.torresi@gmail.com"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"
+            android:autoLink="email"
+            android:clickable="true"
+            android:onClick="sendEmail"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Eduardo Fuentes Hurtado"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/emailEduard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo electrónico: eduardo77883@gmail.com"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"
+            android:autoLink="email"
+            android:clickable="true"
+            android:onClick="sendEmail"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Edwin Ricardo Catalán Maldonado"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/emailEdwin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo electrónico: edwinricardocatalan01@gmail.com"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"
+            android:autoLink="email"
+            android:clickable="true"
+            android:onClick="sendEmail"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Misael Rafael Martínez"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/emailMisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo electrónico: misael360rafael@gmail.com"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"
+            android:autoLink="email"
+            android:clickable="true"
+            android:onClick="sendEmail"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Sergio Pedraza García"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/emailSerg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo electrónico: sergiopedrazagarciq@gmail.com"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"
+            android:autoLink="email"
+            android:clickable="true"
+            android:onClick="sendEmail"
+            android:focusable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Uriel Lara Texmaye"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/emailUri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo electrónico: larauriel58@gmail.com"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:fontFamily="@font/okashi_regular"
+            android:layout_gravity="center"
+            android:autoLink="email"
+            android:clickable="true"
+            android:onClick="sendEmail"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

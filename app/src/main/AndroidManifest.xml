@@ -4,24 +4,34 @@
 
     <application
         android:allowBackup="true"
+        android:exported="true"
         android:icon="@mipmap/logo2"
         android:label="Pädi Hñähñu"
         android:roundIcon="@mipmap/logo2_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Design.Light.NoActionBar"
-        android:exported="true">
-        <activity android:name=".memoramaActivity"
+        android:theme="@style/Theme.Design.Light.NoActionBar">
+        <activity android:name=".InfoActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".SoundWords"
-            android:screenOrientation="portrait"
+        <activity
+            android:name=".memoramaActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SoundWords"
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -30,8 +40,8 @@
         </activity>
         <activity
             android:name=".GameScreenActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -40,8 +50,8 @@
         </activity>
         <activity
             android:name=".activityScrable"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -50,8 +60,8 @@
         </activity>
         <activity
             android:name=".RelationWordsActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -60,8 +70,8 @@
         </activity>
         <activity
             android:name=".SaludosActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -70,8 +80,8 @@
         </activity>
         <activity
             android:name=".NumbersActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -80,8 +90,8 @@
         </activity>
         <activity
             android:name=".AlphabetActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -90,8 +100,8 @@
         </activity>
         <activity
             android:name=".ColorsActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
